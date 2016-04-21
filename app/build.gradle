@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.teddydeveloper.stardewvalleywiki"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 13
+        versionName "2.0.2"
+
+        //Espresso
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.properties'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.xml'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    //https://github.com/Pkmmte/PkRSS
+    compile 'com.pkmmte.pkrss:pkrss:1.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    // Support Libraries
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:support-annotations:23.1.1'
+    compile 'com.android.support:support-v13:23.1.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // App's dependencies, including test
+    compile 'com.amplitude:android-sdk:2.5.0'
+    dependencies {
+        compile 'com.commit451:PhotoView:1.2.4'
+    }
+    //Espresso
+    // https://google.github.io/android-testing-support-library/docs/espresso/setup/index.html
+    //https://google.github.io/android-testing-support-library/downloads/index.html
+    // Android JUnit Runner
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    // JUnit4 Rules
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    // Espresso core
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    // Espresso-contrib for DatePicker, RecyclerView, Drawer actions, Accessibility checks, CountingIdlingResource
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
+    // Espresso-web for WebView support
+    //  androidTestCompile 'com.android.support.test.espresso:espresso-web:2.2.2'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    //  compile 'com.squareup.okhttp:okhttp:1.6.0'
+    //  compile 'com.squareup.okhttp:okhttp-urlconnection:1.6.0'
+    compile files('libs/revmob.jar')
+}

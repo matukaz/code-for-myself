@@ -1,0 +1,188 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <!-- style="width: 100%;" -->
+
+    <style>
+
+
+
+        html, body {
+        max-width:100%;
+        height:100%;
+        }
+
+        html {
+        display: table;
+        margin: auto;
+        }
+
+        body {
+        display: table-cell;
+        vertical-align: top;
+        padding: 20px;
+        }
+
+
+        .p {
+        color:#493D26;
+        }
+
+        #small {
+
+        font-size:1.0em;
+        }
+
+        .content {
+        overflow: hidden;
+        }
+
+        .content img {
+        margin-right: 15px;
+        float: left;
+        }
+
+        .screen{
+        height:100%;
+        }
+
+        .table-outter {
+
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        box-sizing:border-box;
+        width:320px;
+
+        }
+
+
+
+
+        #qualityimage img {
+        position: absolute;
+        }
+        #qualitycontainersm {
+
+        height: 24px;
+        width: 24px;
+
+        }
+
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id = "screen">
+<div class="content">
+    <img src="../image/Wheat.png" width="48px" height="48px" alt="" >
+    <h3>Wheat</h3>
+</div>
+    <b>Season: Summer</b><br>
+    One of the most widely cultivated grains. Makes for a great flour for breads and cakes.
+<hr>
+
+    <div class="content">
+        <img src="../image/32px-Wheat_Seeds.png" width="32" height="32"  alt="" >
+        <span style=""> Wheat seed price </span>
+
+    </div>
+    General Store - <span class="sortkey" style="display:none;"></span><img alt="Coin Icon" src="../image/24px-Gold.png" width="24" height="24">10 g<br>
+    JojoMart -  <span class="sortkey" style="display:none;float:right;>"></span><img alt="Coin Icon" src="../image/24px-Gold.png" width="24" height="24">12 g
+
+
+
+
+    </div>
+</body>
+</html>
+<hr>
+
+
+
+
+
+<table>
+    <tbody><tr>
+        <td><span class="sortkey" style="display:none;">250</span><img src="../image/Wheat.png" width="24" height="24" >
+        </td>
+        <td>25 g
+        </td>
+
+    </tr>
+    <tr>
+        <td><div id="qualitycontainersm"><div id="qualityimage"><img  src="../image/Wheat.png" width="24" height="24"><img alt="Silver Quality Icon.png" src="../image/24px-Silver_Quality_Icon.png" width="24" height="24"></div></div>
+        </td>
+        <td>31 g
+        </td>
+    </tr>
+    <tr>
+        <td><div id="qualitycontainersm"><div id="qualityimage"><img  src="../image/Wheat.png" width="24" height="24" ><img alt="Gold Quality Icon.png" src="../image/24px-Gold_Quality_Icon.png" width="24" height="24"></div></div>
+        </td>
+        <td>37 g
+        </td>
+
+    </tr></tbody>
+</table>
+
+
+
+<hr>
+<div class="table-outter">
+    <table class="wikitable" style="text-align:center;" id="roundedborder">
+        <tbody><tr>
+            <th>Stage 1
+            </th>
+            <th>Stage 2
+            </th>
+            <th>Stage 3
+            </th>
+            <th>Stage 4
+            </th>
+            <th>Harvest
+            </th>
+        </tr>
+        <tr>
+            <td><div class="center"><div class="floatnone"><img alt="Wheat Stage 1.png" src="../image/Wheat_Stage_1.png" width="48" height="48"></div></div>
+            </td>
+            <td><div class="center"><div class="floatnone"><img alt="Wheat Stage 2.png" src="../image/Wheat_Stage_2.png" width="48" height="48"></div></div>
+            </td>
+            <td><div class="center"><div class="floatnone"><img alt="Wheat Stage 3.png" src="../image/Wheat_Stage_3.png" width="50" height="80"></div></div>
+            </td>
+            <td><div class="center"><div class="floatnone"><img alt="Wheat Stage 4.png" src="../image/Wheat_Stage_4.png" width="50" height="80"></div></div>
+            </td>
+            <td><div class="center"><div class="floatnone"><img alt="Wheat Stage 5.png" src="../image/Wheat_Stage_5.png" width="50" height="80"></div></div>
+            </td>
+            </tr>
+        <tr>
+            <td>1 Day
+            </td>
+            <td>1 Day
+            </td>
+            <td>1 Day
+            </td>
+            <td>1 Day
+            </td>
+            <td>Total: 4 Days
+            </td>
+            </tr></tbody></table></div>
+<br>
+Gold per day: <div id="small"><img alt="Coin Icon" src="../image/24px-Gold.png" width="24" height="24"> ~3,75g/d <br></div>
+
+<hr>
+Used in:<br>
+<span id="nametemplate" class="nametemplate"><img  src="../image/24px-Fodder_Bundle.png" width="24" height="24" >Fodder Bundle</span>
+<br>
+<span id="nametemplate" class="nametemplate"><img  src="../image/Beer.png" width="24" height="24" >Beer</span>
+

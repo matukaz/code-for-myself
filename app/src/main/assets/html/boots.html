@@ -1,0 +1,279 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <!-- style="width: 100%;" -->
+
+    <style>
+
+        html, body {
+        height: 100%;
+        }
+
+        html {
+        display: table;
+        margin: auto;
+        }
+
+        body {
+        display: table-cell;
+        vertical-align: top;
+        }
+
+        table {
+        background-color: rgba(255,255,255,0.58);
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: grey;
+        }
+
+
+
+
+        #infoboxtable {
+
+        width: 100%;
+        }
+
+
+        #infoboxheader {
+        text-align: center;
+        font-size: 24px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        text-shadow: 0px 1.5px 0px rgba(0,0,0,0.2);
+        }
+
+        .center {
+        width: 100%;
+        text-align: center;
+        }
+
+        #infoboxsection {
+        background-color: #03A007;
+        vertical-align: top;
+        padding-left: 15px;
+        padding-right: 5px;
+
+        border-color: #007448;
+        box-shadow: 0px 1px rgba(0,0,0,0.3);
+        color: white;
+        text-shadow: 0px 2px #00321f;
+        }
+
+        table.wikitable > * > tr > th {
+        background-color: #03A007;
+        text-align: center;
+        border-color: #007448;
+        box-shadow: 0px 1px rgba(0,0,0,0.3);
+        color: white;
+        text-shadow: 0px 2px #00321f;
+        }
+
+        table.wikitable > * > tr > td {
+        border: 1px solid #8DCAF0;
+        padding: 0.1em;
+        background-color: rgba(255,255,255,0.58);
+        }
+
+        a {
+        text-decoration: none !important;
+        color:black;
+        pointer-events: none;
+        cursor: default;
+        }
+
+
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="infoboxborder">
+    <table id="infoboxtable">
+        <tbody><tr>
+
+            <h2>Boots</h2>
+            <p>Boots are pieces of footwear that often boost player stats. They're either found or purchased. They can be sold at the Adventurer's Guild. Only one pair can be equipped at a time.</p>
+
+            <table class="wikitable sortable jquery-tablesorter">
+                <thead><tr>
+                    <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Image
+                    </th>
+                    <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Description
+                    </th>
+                    <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Stats
+                    </th>
+                    <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Location
+                    </th>
+                    <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Price (Buy / Sell)
+                    </th></tr></thead><tbody>
+            <tr>
+                <td><p>Sneakers</p><img alt="Sneakers.png" src="../image/Sneakers.png" width="48" height="48">
+                </td>
+                <td>A little flimsy... but fashionable!
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +1 Defense
+                </td>
+                <td>Purchased from <a href="/Adventurer%27s_Guild" title="Adventurer's Guild">Adventurer's Guild</a> after completing "Initiation". Also dropped on level 9 of the mines randomly from slimes.
+                </td>
+                <td>500g / 50g
+                </td></tr>
+            <tr>
+                <td><p>Rubber Boots</p><div class="center"><div class="floatnone"><img alt="Rubber Boots.png" src="../image/Rubber_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>Protection from the elements.
+                </td>
+                <td><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24" > +1 Immunity
+                </td>
+                <td>Drop from rare Green <a href="/Slimes" title="Slimes">Slimes</a>.
+                </td>
+                <td>- / 50g
+                </td></tr>
+            <tr>
+                <td><p>Leather Boots</p><div class="center"><div class="floatnone"><img alt="Leather Boots.png" src="../image/Leather_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>The leather is very supple.
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +1 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24" > +1 Immunity
+                    </p>
+                </td>
+                <td>Reward from Chest at level 10 of <a href="Mines.html" title="The Mines">The Mines</a>.
+                </td>
+                <td> - / 100g
+                </td></tr>
+            <tr>
+                <td><p>Work Boots</p><div class="center"><div class="floatnone"><img alt="Work Boots.png" src="../image/Work_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>Steel-toed for extra protection
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24"> +2 Defense
+                </td>
+                <td>
+                </td>
+                <td>
+                </td></tr>
+            <tr>
+                <td><p>Combat Boots</p><div class="center"><div class="floatnone"><img alt="Combat Boots.png" src="../image/Combat_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>Reinforced with Iron mesh
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +3 Defense
+                </td>
+                <td>Purchased from <a href="/Adventurer%27s_Guild" title="Adventurer's Guild">Adventurer's Guild</a>.
+                </td>
+                <td>1250g / 150g
+                </td></tr>
+            <tr>
+                <td><p>Tundra Boots</p><div class="center"><div class="floatnone"><img alt="Tundra Boots.png" src="../image/Tundra_Boots.png" width="48" height="48"></a></div></div>
+                </td>
+                <td>The fuzzy lining keeps your ankles so warm.
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +2 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24" > +1 Immunity
+                    </p>
+                </td>
+                <td>Reward from Chest at level 50 of <a href="Mines.html" title="The Mines">The Mines</a>.
+                </td>
+                <td> - / 150g
+                </td></tr>
+            <tr>
+                <td><p>Thermal Boots</p><div class="center"><div class="floatnone"><img alt="Thermal Boots.png" src="../image/Thermal_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>Designed with extreme weather in mind.
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +1 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24" > +2 Immunity
+                    </p>
+                </td>
+                <td>Random drop from monsters in <a href="Mines.html" title="The Mines">The Mines</a>.
+                </td>
+                <td> - / 150g
+                </td></tr>
+            <tr>
+                <td><p>Cowboy Boots</p><div class="center"><div class="floatnone"><img alt="Cowboy Boots.png" src="../image/Cowboy_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>It's the height of country fashion
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +2 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24" > +2 Immunity
+                    </p>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td></tr>
+            <tr>
+                <td><p>Dark Boots</p><div class="center"><div class="floatnone"><img alt="Dark Boots.png" src="../image/Dark_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>Made from thick black leather
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24"> +4 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24"> +2 Immunity
+                    </p>
+                </td>
+                <td>Purchased from <a href="/Adventurer%27s_Guild" title="Adventurer's Guild">Adventurer's Guild</a> after reaching level 80
+                </td>
+                <td>2500g / -
+                </td></tr>
+            <tr>
+                <td><p>Firewalker Boots</p><div class="center"><div class="floatnone"><img alt="Firewalker Boots.png" src="../image/Firewalker_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>It's said these can withstand the hottest magma.
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +3 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24" > +3 Immunity
+                    </p>
+                </td>
+                <td>Reward from Chest at level 80 of <a href="Mines.html" title="The Mines">The Mines</a>.
+                </td>
+                <td> - / 300g
+                </td></tr>
+            <tr>
+                <td><p>Genie Shoes</p><div class="center"><div class="floatnone"><img alt="Genie Shoes.png" src="../image/Genie_Shoes.png" width="48" height="48"></div></div>
+                </td>
+                <td>A curious energy permeates the fabric
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24" > +1 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24" > +6 Immunity
+                    </p>
+                </td>
+                <td>Found in Treasure Chests from <a href="fishes.html" title="Fishing">Fishing</a>, also drops in <a href="/Skull_Cavern" title="Skull Cavern">Skull Cavern</a>
+                </td>
+                <td>
+                </td></tr>
+            <tr>
+                <td><p>Space Boots</p><div class="center"><div class="floatnone"><img alt="Space Boots.png" src="../image/Space_Boots.png" width="48" height="48"></div></div>
+                </td>
+                <td>An iridium weave gives them a purple sheen.
+                </td>
+                <td><img alt="Defense.png" src="../image/24px-Defense.png" width="24" height="24"> +4 Defense
+                    <p><img alt="Immunity.png" src="../image/24px-Immunity.png" width="24" height="24"> +4 Immunity
+                    </p>
+                </td>
+                <td>Reward from Chest at level 110 of <a href="Mines.html" title="The Mines">The Mines</a>.
+                </td>
+                <td> - / 400g
+                </td></tr>
+            </tbody><tfoot></tfoot></table>
+
+
+    <tr>
+            <td colspan="2" id="infoboxfooter">
+            </td></tr></tbody></table>
+</div>
+
+
+</body>
+</html>

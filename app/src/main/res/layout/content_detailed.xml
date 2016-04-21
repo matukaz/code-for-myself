@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:id="@+id/cardview_main"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/image"
+
+            android:src="@drawable/pickaxe"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="left"
+            android:id="@+id/title"
+            android:text="Hoe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:gravity="left"
+                android:autoLink="web"
+                android:id="@+id/description"
+                android:text="Cost: starter tool\nIngredients: Copper bar (5) \nIncreases maximum area of effect to 3 tiles, in a line in front of you."
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="15sp"
+                android:typeface="sans" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+</LinearLayout>
