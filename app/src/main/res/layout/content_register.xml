@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
+    android:fitsSystemWindows="true">
+<LinearLayout
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        android:id="@+id/cardview_main"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:id="@+id/TitleText"
+                android:text="Giveaway!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/detailsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:autoLink="web|all"
+                android:gravity="center"
+                android:text="Giving back to community \n.I'm giving away total of 5 stardew valley original Steam keys. To join giveaway you have to insert email, so I can contact you later, if you have won. Emails will never be used for something else then contacting. You can also use some kind of spam account. Every person gets 1 giveaway token by default. To earn more, click on 'earn more token' and watch till ad ends and you will earn more tokens. All revenue goes towards to next giveaway. \n Giveaway Date: 15 May 22.00 GMT"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <!-- Email Label -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="8dp" >
+        <EditText android:id="@+id/input_email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/Button"
+        android:layout_gravity="center_horizontal" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>
+</ScrollView>

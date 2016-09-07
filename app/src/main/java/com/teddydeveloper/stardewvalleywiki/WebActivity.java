@@ -1,5 +1,6 @@
 package com.teddydeveloper.stardewvalleywiki;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,12 +13,18 @@ import android.webkit.WebView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.revmob.RevMob;
+import com.revmob.RevMobAdsListener;
 
 public class WebActivity extends AppCompatActivity {
 
     private WebView webView;
     String itemType;
     String title;
+
+    private RevMob revmob;
+    private Activity currentActivity;
+
 
     private final String LOG_TAG = WebActivity.class.getSimpleName();
 
@@ -58,9 +65,11 @@ public class WebActivity extends AppCompatActivity {
             webView.loadUrl("file:///android_asset/html/animals.html");
         }
         else if(itemType.toLowerCase().equals("boots")){
+            showAds();
             webView.loadUrl("file:///android_asset/html/boots.html");
         }
         else if(itemType.toLowerCase().equals("hats")){
+            showAds();
             //todo change it back
             webView.loadUrl("file:///android_asset/html/hats.html");
         }
@@ -93,18 +102,28 @@ public class WebActivity extends AppCompatActivity {
 
     }
     public void showAds(){
-        final AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
 
-        //   AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-        mAdView.setAdListener(new com.google.android.gms.ads.AdListener() {
+        currentActivity = this;
+        revmob = RevMob.startWithListener(this, new RevMobAdsListener() {
             @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                mAdView.setVisibility(View.VISIBLE);
+            public void onRevMobSessionIsStarted() {
+                revmob.showBanner(currentActivity);
             }
         });
+
+
+//        final AdView mAdView = (AdView) findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//
+//        //   AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+//        mAdView.setAdListener(new com.google.android.gms.ads.AdListener() {
+//            @Override
+//            public void onAdLoaded() {
+//                super.onAdLoaded();
+//                mAdView.setVisibility(View.VISIBLE);
+//            }
+//        });
 
     }
 

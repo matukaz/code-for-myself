@@ -1,5 +1,6 @@
 package com.teddydeveloper.stardewvalleywiki;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,6 +22,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.amplitude.api.Amplitude;
+import com.revmob.RevMob;
+import com.revmob.RevMobAdsListener;
+import com.revmob.ads.interstitial.RevMobFullscreen;
+import com.teddydeveloper.stardewvalleywiki.giveaway.GiveAwayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,21 +55,10 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.nav_view)
     NavigationView navigationView;
 
-  //  @Bind(R.id.collapsing_toolbar)
-  //  CollapsingToolbarLayout collapsingToolbarLayout;
-
     @Bind(R.id.scrollableview)
     RecyclerView recyclerView;
 
-   /** @Bind(R.id.scrollview)
-    NestedScrollView ns; **/
-
-    @Bind(R.id.cardview_main)
-    CardView MainCardView;
-
-    //TODO delete this
     private List<Data> data;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,25 +70,15 @@ public class MainActivity extends AppCompatActivity
         Amplitude.getInstance().logEvent("OPEN_APP");
         setSupportActionBar(toolbar);
 
-       // collapsingToolbarLayout.setTitle(getTitle());
-       // collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(android.R.color.transparent));
-
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
-        // Recyclerview
-        // RecyclerView can perform several optimizations if it can know in advance that changes in adapter content cannot change the size of the RecyclerView itself.
-       // recyclerView.setHasFixedSize(true);
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
-        // recyclerView.setNestedScrollingEnabled(true);
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
@@ -134,7 +118,7 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data("links","Useful links", R.drawable.url));
 
 
-      //  data.add(new Data("test","Test", android.R.drawable.ic_menu_compass));
+        data.add(new Data("giveaway","Giveaway", android.R.drawable.ic_menu_compass));
     }
 
     @Override
@@ -175,16 +159,6 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-/**
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else **/
         if (id == R.id.nav_share) {
             Amplitude.getInstance().logEvent("SHARING_APP");
             shareApp();
@@ -243,6 +217,11 @@ public class MainActivity extends AppCompatActivity
 
         String itemTypeClickedOn = data.get(pos).getItemType();
         Amplitude.getInstance().logEvent("itemClicked" + itemTypeClickedOn);
+
+        if(itemTypeClickedOn == "giveaway"){
+            Intent listActivity = new Intent(this, GiveAwayActivity.class);
+            startActivity(listActivity);
+        }
 
 
 
