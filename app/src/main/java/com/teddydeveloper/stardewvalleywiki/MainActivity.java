@@ -195,6 +195,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_feedback) {
             Amplitude.getInstance().logEvent("SEND_FEEDBACK");
             sendFeedback();
+        } else if(id == R.id.nav_form) {
+            //todo open google form
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://goo.gl/forms/t6RGzRBIAM"));
+            startActivity(browserIntent);
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
