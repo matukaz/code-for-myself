@@ -1,15 +1,14 @@
 package com.teddydeveloper.stardewvalleywiki;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -20,11 +19,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 
 import com.amplitude.api.Amplitude;
-import com.revmob.RevMob;
-import com.revmob.RevMobAdsListener;
-import com.revmob.ads.interstitial.RevMobFullscreen;
 import com.teddydeveloper.stardewvalleywiki.giveaway.GiveAwayActivity;
 
 import java.util.ArrayList;
@@ -35,11 +32,11 @@ import butterknife.ButterKnife;
 
 
 /**
- * Kasutada mingit basic activityt. 
- *
- *
+ * Kasutada mingit basic activityt.
+ * <p>
+ * <p>
  * https://snow.dog/blog/material-design-flexible-space-header-with-image/
- *http://blog.grafixartist.com/toolbar-animation-with-android-design-support-library/
+ * http://blog.grafixartist.com/toolbar-animation-with-android-design-support-library/
  */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, DataAdapter.DataAdapterClickListener {
@@ -79,6 +76,24 @@ public class MainActivity extends AppCompatActivity
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
+        ImageButton closeBtn = (ImageButton) findViewById(R.id.google_form_close_btn);
+        final CardView googleFormCardView = (CardView) findViewById(R.id.google_form_cardview);
+        if (!isGoogleFormVisible()) {
+            googleFormCardView.setVisibility(View.GONE);
+        }
+
+
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Set cardview to gone
+
+                googleFormCardView.setVisibility(View.GONE);
+                saveGoogleFormPref();
+
+            }
+        });
+
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
@@ -93,32 +108,44 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    private boolean isGoogleFormVisible() {
+        SharedPreferences prefs = getSharedPreferences("PREF_GOOGLE_FORM", MODE_PRIVATE);
+        return prefs.getBoolean("googleFormVisible", true);
+    }
+
+    private void saveGoogleFormPref() {
+
+        SharedPreferences.Editor editor = getSharedPreferences("PREF_GOOGLE_FORM", MODE_PRIVATE).edit();
+        editor.putBoolean("googleFormVisible", false);
+        editor.commit();
+
+    }
 
 
     // This method creates an ArrayList that has three Person objects
 // Checkout the project associated with this tutorial on Github if
 // you want to use the same images.
-    private void initializeData(){
+    private void initializeData() {
         data = new ArrayList<>();
 
-        data.add(new Data("basic","Basic", R.drawable.main_basic));
-        data.add(new Data("npc","Npc", R.drawable.abigail_icon));
-        data.add(new Data("seasons","Calendar & Seasons", R.drawable.main_calendar));
-        data.add(new Data("crop","Crops & Fruits", R.drawable.parsnip));
-        data.add(new Data("items","Items", R.drawable.main_items));
-     // data.add(new Data("Valley", R.drawable.pickaxe));
-     // data.add(new Data("Environment", R.drawable.pickaxe));
-        data.add(new Data("resources", "Resources & Minerals",R.drawable.coal));
-        data.add(new Data("food","Food", R.drawable.food));
-        data.add(new Data("fishes","Fish", R.drawable.main_fish));
-        data.add(new Data("animals","Animals", R.drawable.cow));
-        data.add(new Data("boots","Boots", R.drawable.boots));
-        data.add(new Data("hats","Hats", R.drawable.hats));
-        data.add(new Data("map","Map", R.drawable.main_map));
-        data.add(new Data("links","Useful links", R.drawable.url));
+        data.add(new Data("basic", "Basic", R.drawable.main_basic));
+        data.add(new Data("npc", "Npc", R.drawable.abigail_icon));
+        data.add(new Data("seasons", "Calendar & Seasons", R.drawable.main_calendar));
+        data.add(new Data("crop", "Crops & Fruits", R.drawable.parsnip));
+        data.add(new Data("items", "Items", R.drawable.main_items));
+        // data.add(new Data("Valley", R.drawable.pickaxe));
+        // data.add(new Data("Environment", R.drawable.pickaxe));
+        data.add(new Data("resources", "Resources & Minerals", R.drawable.coal));
+        data.add(new Data("food", "Food", R.drawable.food));
+        data.add(new Data("fishes", "Fish", R.drawable.main_fish));
+        data.add(new Data("animals", "Animals", R.drawable.cow));
+        data.add(new Data("boots", "Boots", R.drawable.boots));
+        data.add(new Data("hats", "Hats", R.drawable.hats));
+        data.add(new Data("map", "Map", R.drawable.main_map));
+        data.add(new Data("links", "Useful links", R.drawable.url));
 
 
-        data.add(new Data("giveaway","Giveaway", android.R.drawable.ic_menu_compass));
+        data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
     }
 
     @Override
@@ -132,12 +159,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    } **/
+     * @Override public boolean onCreateOptionsMenu(Menu menu) {
+     * // Inflate the menu; this adds items to the action bar if it is present.
+     * getMenuInflater().inflate(R.menu.main, menu);
+     * return true;
+     * }
+     **/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -162,7 +189,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_share) {
             Amplitude.getInstance().logEvent("SHARING_APP");
             shareApp();
-        } else if(id==R.id.nav_rate){
+        } else if (id == R.id.nav_rate) {
             Amplitude.getInstance().logEvent("RATE_APP");
             showGooglePlayStore();
         } else if (id == R.id.nav_feedback) {
@@ -177,9 +204,9 @@ public class MainActivity extends AppCompatActivity
 
         Intent Email = new Intent(Intent.ACTION_SEND);
         Email.setType("text/email");
-        Email.putExtra(Intent.EXTRA_EMAIL, new String[] { getString(R.string.teddyEmail) });
+        Email.putExtra(Intent.EXTRA_EMAIL, new String[]{getString(R.string.teddyEmail)});
         Email.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.FeedbackOrBug));
-        Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.deviceInfo) + android.os.Build.MODEL + " ("+ Build.VERSION.RELEASE +")"+
+        Email.putExtra(Intent.EXTRA_TEXT, getString(R.string.deviceInfo) + android.os.Build.MODEL + " (" + Build.VERSION.RELEASE + ")" +
                 getString(R.string.dear_dev));
         startActivity(Intent.createChooser(Email, getString(R.string.sendFeedback)));
     }
@@ -188,7 +215,7 @@ public class MainActivity extends AppCompatActivity
 
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
-        String shareBody = "https://play.google.com/store/apps/details?id="+this.getPackageName();
+        String shareBody = "https://play.google.com/store/apps/details?id=" + this.getPackageName();
         String subjectText = getString(R.string.look_at_this_app);
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, subjectText);
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
@@ -199,10 +226,10 @@ public class MainActivity extends AppCompatActivity
 
         try {
             //Open google play market
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id="+this.getPackageName())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + this.getPackageName())));
         } catch (ActivityNotFoundException e) {
             //if Google play market is not found and throws exception
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id="+this.getPackageName())));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + this.getPackageName())));
         } catch (Exception e) {
             //Error message
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -211,43 +238,38 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void itemClicked(View viewm,int pos) {
+    public void itemClicked(View viewm, int pos) {
         Log.d("itemClicked" + data.get(pos).itemType + " " + data.get(pos).getItemType(), LOG_TAG);
 
 
         String itemTypeClickedOn = data.get(pos).getItemType();
         Amplitude.getInstance().logEvent("itemClicked" + itemTypeClickedOn);
 
-        if(itemTypeClickedOn == "giveaway"){
+        if (itemTypeClickedOn == "giveaway") {
             Intent listActivity = new Intent(this, GiveAwayActivity.class);
             startActivity(listActivity);
         }
+        if (itemTypeClickedOn == "fishes" || itemTypeClickedOn == "animals" || itemTypeClickedOn == "boots" || itemTypeClickedOn == "hats") {
 
-
-
-
-
-        if(itemTypeClickedOn == "fishes" || itemTypeClickedOn == "animals" || itemTypeClickedOn == "boots" || itemTypeClickedOn == "hats" ){
-
-            Log.d("List!",LOG_TAG);
+            Log.d("List!", LOG_TAG);
             Intent listActivity = new Intent(this, WebActivity.class);
             listActivity.putExtra("itemType", itemTypeClickedOn);
 
             startActivity(listActivity);
 
 
-         }else if(itemTypeClickedOn == "npc" || itemTypeClickedOn =="food" || itemTypeClickedOn == "crop" || itemTypeClickedOn =="resources") {
-            Log.d("List!",LOG_TAG);
+        } else if (itemTypeClickedOn == "npc" || itemTypeClickedOn == "food" || itemTypeClickedOn == "crop" || itemTypeClickedOn == "resources") {
+            Log.d("List!", LOG_TAG);
             Intent listActivity = new Intent(this, SearchListActivity.class);
             listActivity.putExtra("itemType", itemTypeClickedOn);
             startActivity(listActivity);
-        }else if(itemTypeClickedOn != "map" && itemTypeClickedOn != "calendar") {
-            Log.d("List!",LOG_TAG);
+        } else if (itemTypeClickedOn != "map" && itemTypeClickedOn != "calendar") {
+            Log.d("List!", LOG_TAG);
             Intent listActivity = new Intent(this, ListActivity.class);
             listActivity.putExtra("itemType", itemTypeClickedOn);
             startActivity(listActivity);
-        } else if(itemTypeClickedOn.toLowerCase() == "map" || itemTypeClickedOn.toLowerCase() == "calendar"){
-            Log.d("Pictures!!",LOG_TAG);
+        } else if (itemTypeClickedOn.toLowerCase() == "map" || itemTypeClickedOn.toLowerCase() == "calendar") {
+            Log.d("Pictures!!", LOG_TAG);
             Intent listActivity = new Intent(this, MapActivity.class);
             listActivity.putExtra("itemType", itemTypeClickedOn);
             startActivity(new Intent(listActivity));

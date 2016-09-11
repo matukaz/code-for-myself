@@ -1,71 +1,80 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- scrollview android.support.v4.widget.NestedScrollView -->
+<?xml version="1.0" encoding="utf-8"?><!-- scrollview android.support.v4.widget.NestedScrollView -->
 
-<android.support.v4.widget.NestedScrollView
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:id="@+id/scrollview"
-    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_marginTop="@dimen/abc_action_bar_default_height_material"
-    android:layout_height="match_parent" >
+    android:fillViewport="true">
 
 
-   <!-- app:layout_behavior="@string/appbar_scrolling_view_behavior"> -->
+    <!-- app:layout_behavior="@string/appbar_scrolling_view_behavior"> -->
 
-        <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/google_form_cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
 
-            <android.support.v7.widget.CardView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardElevation="6dp"
-                android:id="@+id/cardview_main"
-                app:cardUseCompatPadding="true">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <!-- <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="10dp"
+                     android:layout_marginRight="10dp"
+                     android:layout_marginTop="15dp"
+                     android:gravity="center"
+                     android:id="@+id/mainActivityTitleText"
+                     android:text="Welcome to Stardew Valley Wiki"
+                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                     android:textSize="30sp"
+                     android:textStyle="bold" /> -->
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"/>
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toLeftOf="@+id/google_form_close_btn"
+                    android:layout_toStartOf="@+id/google_form_close_btn"
+                    android:autoLink="web|all"
+                    android:gravity="center"
+                    android:text="Since there is a lot to do, I am doing little survey to know, what people want: If you have 5 minutes, please answer it \n http://goo.gl/forms/t6RGzRBIAM"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textSize="14sp" />
 
-                   <!-- <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="15dp"
-                        android:gravity="center"
-                        android:id="@+id/mainActivityTitleText"
-                        android:text="Welcome to Stardew Valley Wiki"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                        android:textSize="30sp"
-                        android:textStyle="bold" /> -->
+                <ImageButton
+                    android:id="@+id/google_form_close_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right"
+                    android:background="@drawable/close_btn" />
+            </RelativeLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="15dp"
-                        android:autoLink="web|all"
-                        android:gravity="center"
-                        android:text="Since there is a lot to do, I am doing little survey to know, what people want: If you have 5 minutes, please answer it \n http://goo.gl/forms/t6RGzRBIAM"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                        android:textSize="14sp" />
-
-
-            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/scrollableview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-        </LinearLayout>
+    </LinearLayout>
 
-<!--</LinearLayout> -->
+    <!--</LinearLayout> -->
 </android.support.v4.widget.NestedScrollView>
 
 
