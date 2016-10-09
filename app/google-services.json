@@ -1,43 +1,54 @@
 {
   "project_info": {
-    "project_id": "wiki-for-stardew-valley",
     "project_number": "106682017183",
-    "name": "Wiki for Stardew Valley"
+    "firebase_url": "https://wiki-for-stardew-valley.firebaseio.com",
+    "project_id": "wiki-for-stardew-valley",
+    "storage_bucket": "wiki-for-stardew-valley.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:106682017183:android:f3e3fcce320f886a",
-        "client_id": "android:com.teddydeveloper.stardewvalleywiki",
-        "client_type": 1,
         "android_client_info": {
-          "package_name": "com.teddydeveloper.stardewvalleywiki",
-          "certificate_hash": []
+          "package_name": "com.teddydeveloper.stardewvalleywiki"
         }
       },
-      "oauth_client": [],
-      "api_key": [],
+      "oauth_client": [
+        {
+          "client_id": "106682017183-k3gmpo306ra3qjej58mci05c56fehjkj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.teddydeveloper.stardewvalleywiki",
+            "certificate_hash": "EC6690290D36BF9BF6E37FA61C8F7F116276F47D"
+          }
+        },
+        {
+          "client_id": "106682017183-0f4ai99q0rm6ffa8kof0m2av1hh6lk6d.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "106682017183-hq3tmulssk28422uirurf8g0ch1km06q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChozK7LMSkMEjEf-uvirwo6LOnGgNWWTM"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
-        },
-        "cloud_messaging_service": {
-          "status": 2,
-          "apns_config": []
         },
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
         },
-        "google_signin_service": {
-          "status": 1
-        },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
   ],
-  "client_info": [],
-  "ARTIFACT_VERSION": "1"
+  "configuration_version": "1"
 }

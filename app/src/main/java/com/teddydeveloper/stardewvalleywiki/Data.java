@@ -43,9 +43,7 @@ public class Data {
         this.title = title;
     }
 
-    public int getPhotoId() {
-        return photoId;
-    }
+    public int getPhotoId() { return photoId; }
 
     public String getItemType() {
         return itemType;

@@ -22,7 +22,8 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.amplitude.api.Amplitude;
-import com.teddydeveloper.stardewvalleywiki.giveaway.GiveAwayActivity;
+import com.teddydeveloper.stardewvalleywiki.Const.Const;
+import com.teddydeveloper.stardewvalleywiki.Giveaway.GiveAwayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,10 +88,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 //Set cardview to gone
-
                 googleFormCardView.setVisibility(View.GONE);
                 saveGoogleFormPref();
-
             }
         });
 
@@ -109,13 +108,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     private boolean isGoogleFormVisible() {
-        SharedPreferences prefs = getSharedPreferences("PREF_GOOGLE_FORM", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences(Const.PREF_GOOGLE_FORM, MODE_PRIVATE);
         return prefs.getBoolean("googleFormVisible", true);
     }
 
     private void saveGoogleFormPref() {
 
-        SharedPreferences.Editor editor = getSharedPreferences("PREF_GOOGLE_FORM", MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor = getSharedPreferences(Const.PREF_GOOGLE_FORM, MODE_PRIVATE).edit();
         editor.putBoolean("googleFormVisible", false);
         editor.commit();
 
@@ -128,14 +127,15 @@ public class MainActivity extends AppCompatActivity
     private void initializeData() {
         data = new ArrayList<>();
 
+        // Refactor me
         data.add(new Data("basic", "Basic", R.drawable.main_basic));
         data.add(new Data("npc", "Npc", R.drawable.abigail_icon));
         data.add(new Data("seasons", "Calendar & Seasons", R.drawable.main_calendar));
         data.add(new Data("crop", "Crops & Fruits", R.drawable.parsnip));
         data.add(new Data("items", "Items", R.drawable.main_items));
-        // data.add(new Data("Valley", R.drawable.pickaxe));
-        // data.add(new Data("Environment", R.drawable.pickaxe));
-        data.add(new Data("resources", "Resources & Minerals", R.drawable.coal));
+        data.add(new Data("Valley","valley", R.drawable.main_basic));
+       // data.add(new Data("Environment", "Enviroment", R.drawable.main_basic));
+       // data.add(new Data("resources", "Resources & Minerals", R.drawable.coal));
         data.add(new Data("food", "Food", R.drawable.food));
         data.add(new Data("fishes", "Fish", R.drawable.main_fish));
         data.add(new Data("animals", "Animals", R.drawable.cow));
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data("links", "Useful links", R.drawable.url));
 
 
-        data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
+     //   data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
     }
 
     @Override
