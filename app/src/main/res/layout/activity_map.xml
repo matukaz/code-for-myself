@@ -1,10 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</RelativeLayout>
+        android:layout_height="256dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            style="@style/SizeSpecificCollapsingToolbarLayout"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/map"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin">
+
+                <RelativeLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:paddingRight="15dp"
+                        android:id="@+id/farm_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/standard_farm_map_icon"
+                        android:layout_alignParentRight="true"
+                        android:fitsSystemWindows="true"
+                        app:layout_collapseMode="parallax" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/farm_icon"
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Original Farm"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                        android:layout_toLeftOf="@+id/farm_icon"
+                        android:layout_below="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The original farm map, designed to maximize open space for crops and animals." />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Forest map -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:src="@drawable/forest_farm_map"
+                android:paddingBottom="24dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin">
+                <RelativeLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:paddingRight="15dp"
+                        android:id="@+id/forest_farm_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/forest_farm_map_icon"
+                        android:layout_alignParentRight="true"
+                        android:fitsSystemWindows="true"
+                        app:layout_collapseMode="parallax" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/forest_farm_icon"
+                        android:id="@+id/forest_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Forest Farm"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/forest_farm_icon"
+                        android:layout_below="@+id/forest_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The forest encroaches on the land, limiting farming space. However, there are renewable stumps on the west edge of the map, and seasonal forage items spawn there as well (including Secret Woods-specific items). There is a type of weed which spawns on this farm, which looks unique and will always drop Mixed Seeds when cut." />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!-- Hilltop map -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:src="@drawable/hilltop_farm_thumb"
+                android:paddingBottom="24dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin">
+                <RelativeLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:paddingRight="15dp"
+                        android:id="@+id/hilltop_farm_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hilltop_farm_map_icon"
+                        android:layout_alignParentRight="true"
+                        android:fitsSystemWindows="true"
+                        app:layout_collapseMode="parallax" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/hilltop_farm_icon"
+                        android:id="@+id/hilltop_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hill-top Farm"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/hilltop_farm_icon"
+                        android:layout_below="@+id/hilltop_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lots of cliffs and there is a special mining area in the southwest where ore will spawn, as well as unique geode-bearing stones." />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Riverland map -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:src="@drawable/riverlands_farm_thumb"
+                android:paddingBottom="24dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin">
+                <RelativeLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:paddingRight="15dp"
+                        android:id="@+id/riverlands_farm_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hilltop_farm_map_icon"
+                        android:layout_alignParentRight="true"
+                        android:fitsSystemWindows="true"
+                        app:layout_collapseMode="parallax" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/riverlands_farm_icon"
+                        android:id="@+id/riverlands_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Riverland Farm"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/riverlands_farm_icon"
+                        android:layout_below="@+id/riverlands_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lots of water on this map. limiting space for crops and animals. Looks nice and fishing is actually viable on this farm. In fact, players can catch the same fish that are available in town." />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Riverland map -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:src="@drawable/wilderness_farm_thumb"
+                android:paddingBottom="24dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin">
+                <RelativeLayout
+                    style="@style/Widget.CardContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:paddingRight="15dp"
+                        android:id="@+id/wilderness_farm_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hilltop_farm_map_icon"
+                        android:layout_alignParentRight="true"
+                        android:fitsSystemWindows="true"
+                        app:layout_collapseMode="parallax" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/wilderness_farm_icon"
+                        android:id="@+id/wilderness_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wilderness Farm"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    <TextView
+                        android:layout_toLeftOf="@+id/wilderness_farm_icon"
+                        android:layout_below="@+id/wilderness_farm_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="A little more interesting than the basic farm with a large lake in the southwest corner, and a cliff along the east and south. Monsters will come out at night. Wilderness Golems are unique to this map. Their stats scale with player combat level." />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true">
+            </com.google.android.gms.ads.AdView>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

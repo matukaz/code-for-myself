@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="24dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:src="@drawable/map" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/card_margin"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginRight="@dimen/card_margin">
+        <RelativeLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:paddingRight="15dp"
+                android:id="@+id/farm_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/standard_farm_map_icon"
+                android:layout_alignParentRight="true"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+            <TextView
+                android:layout_toLeftOf="@+id/farm_icon"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Original Farm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+            <TextView
+                android:layout_toLeftOf="@+id/farm_icon"
+                android:layout_below="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The original farm map, designed to maximize open space for crops and animals." />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

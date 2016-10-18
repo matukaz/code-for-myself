@@ -11,12 +11,10 @@
         android:orientation="vertical">
 
     <WebView
-
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/webView"
-        />
+        android:id="@+id/webView" />
 
 
         <com.google.android.gms.ads.AdView
@@ -27,8 +25,7 @@
             ads:adUnitId="@string/banner_ad_unit_id"
             android:layout_alignParentTop="false"
             android:layout_centerHorizontal="true"
-            android:visibility="gone"
-            android:layout_alignParentBottom="true">
+              android:layout_alignParentBottom="true">
         </com.google.android.gms.ads.AdView>
     </LinearLayout>
 

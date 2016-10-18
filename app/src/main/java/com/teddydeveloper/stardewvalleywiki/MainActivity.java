@@ -21,9 +21,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.adcash.mobileads.ui.AdcashInterstitial;
 import com.amplitude.api.Amplitude;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.teddydeveloper.stardewvalleywiki.Const.Const;
 import com.teddydeveloper.stardewvalleywiki.Giveaway.GiveAwayActivity;
+import com.teddydeveloper.stardewvalleywiki.Map.MapActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +62,8 @@ public class MainActivity extends AppCompatActivity
 
     private List<Data> data;
 
+    private AdcashInterstitial mInterstitial;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         ImageButton closeBtn = (ImageButton) findViewById(R.id.google_form_close_btn);
         final CardView googleFormCardView = (CardView) findViewById(R.id.google_form_cardview);
         if (!isGoogleFormVisible()) {
-            googleFormCardView.setVisibility(View.GONE);
+            googleFormCardView.setVisibility(View.VISIBLE);
         }
 
 
@@ -116,7 +122,7 @@ public class MainActivity extends AppCompatActivity
 
         SharedPreferences.Editor editor = getSharedPreferences(Const.PREF_GOOGLE_FORM, MODE_PRIVATE).edit();
         editor.putBoolean("googleFormVisible", false);
-        editor.commit();
+        editor.apply();
 
     }
 
@@ -133,9 +139,7 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data("seasons", "Calendar & Seasons", R.drawable.main_calendar));
         data.add(new Data("crop", "Crops & Fruits", R.drawable.parsnip));
         data.add(new Data("items", "Items", R.drawable.main_items));
-        data.add(new Data("Valley","valley", R.drawable.main_basic));
-       // data.add(new Data("Environment", "Enviroment", R.drawable.main_basic));
-       // data.add(new Data("resources", "Resources & Minerals", R.drawable.coal));
+        data.add(new Data("resources", "Resources & Minerals", R.drawable.coal));
         data.add(new Data("food", "Food", R.drawable.food));
         data.add(new Data("fishes", "Fish", R.drawable.main_fish));
         data.add(new Data("animals", "Animals", R.drawable.cow));
@@ -158,29 +162,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    /**
-     * @Override public boolean onCreateOptionsMenu(Menu menu) {
-     * // Inflate the menu; this adds items to the action bar if it is present.
-     * getMenuInflater().inflate(R.menu.main, menu);
-     * return true;
-     * }
-     **/
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -197,6 +178,7 @@ public class MainActivity extends AppCompatActivity
             sendFeedback();
         } else if(id == R.id.nav_form) {
             //todo open google form
+            saveGoogleFormPref();
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://goo.gl/forms/t6RGzRBIAM"));
             startActivity(browserIntent);
         }

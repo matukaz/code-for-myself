@@ -278,62 +278,59 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
             data.add(new Data("resources","Iron Bar", R.drawable.iron_bar));
             data.add(new Data("resources","Iridium Bar", R.drawable.iridium_bar));
             data.add(new Data("resources","Refined Quartz", R.drawable.refined_quartz));
-
-        data.add(new Data("resources","Hematite", R.drawable.hematite));
-        data.add(new Data("resources","Amethyst", R.drawable.amethyst));
-        data.add(new Data("resources","Lemon Stone", R.drawable.lemon_stone));
-        data.add(new Data("resources","Frozen Tear", R.drawable.frozen_tear));
-        data.add(new Data("resources","Helvite", R.drawable.helvite));
-        data.add(new Data("resources","Jasper", R.drawable.jasper));
-        data.add(new Data("resources","Granite", R.drawable.granite));
-        data.add(new Data("resources","Obsidian", R.drawable.obsidian));
-        data.add(new Data("resources","Dolomite", R.drawable.dolomite));
-        data.add(new Data("resources","Malachite", R.drawable.malachite));
-        data.add(new Data("resources","Aerinite", R.drawable.aerinite));
-        data.add(new Data("resources","Marble", R.drawable.marble));
-        data.add(new Data("resources","Fairy Stone", R.drawable.fairy_stone));
-        data.add(new Data("resources","Lunarite", R.drawable.lunarite));
-        data.add(new Data("resources","Basalt", R.drawable.basalt));
-        data.add(new Data("resources","Fluorapatite", R.drawable.fluorapatite));
-        data.add(new Data("resources","Baryte", R.drawable.baryte));
-        data.add(new Data("resources","Ocean Stone", R.drawable.ocean_stone));
-        data.add(new Data("resources","Esperite", R.drawable.esperite));
-        data.add(new Data("resources","Alamite", R.drawable.alamite));
-        data.add(new Data("resources","Jagoite", R.drawable.jagoite));
-        data.add(new Data("resources","Neptunite", R.drawable.neptunite));
-        data.add(new Data("resources","Kyanite", R.drawable.kyanite));
-        data.add(new Data("resources","Fire Opal", R.drawable.fire_opal));
-        data.add(new Data("resources","Jamborite", R.drawable.jamborite));
-        data.add(new Data("resources","Bixite", R.drawable.bixite));
-        data.add(new Data("resources","Aquamarine", R.drawable.aquamarine));
-        data.add(new Data("resources","Limestone", R.drawable.limestone));
-        data.add(new Data("resources","Calcite", R.drawable.calcite));
-        data.add(new Data("resources","Jade", R.drawable.jade));
-        data.add(new Data("resources","Fire Quartz", R.drawable.fire_quartz));
-        data.add(new Data("resources","Diamond", R.drawable.diamond));
-        data.add(new Data("resources","Geminite", R.drawable.geminite));
-        data.add(new Data("resources","Nekoite", R.drawable.nekoite));
-        data.add(new Data("resources","Earth Crystal", R.drawable.earth_crystal));
-        data.add(new Data("resources","Mudstone", R.drawable.mudstone));
-        data.add(new Data("resources","Celestine", R.drawable.celestine));
-        data.add(new Data("resources","Opal", R.drawable.opal));
-        data.add(new Data("resources","Emerald", R.drawable.emerald));
-        data.add(new Data("resources","Orpiment", R.drawable.orpiment));
-        data.add(new Data("resources","Petrified Slime", R.drawable.petrified_slime));
-        data.add(new Data("resources","Prismatic Shard", R.drawable.prismatic_shard));
-        data.add(new Data("resources","Pyrite", R.drawable.pyrite));
-        data.add(new Data("resources","Quartz", R.drawable.quartz));
-        data.add(new Data("resources","Ruby", R.drawable.ruby));
-        data.add(new Data("resources","Sandstone", R.drawable.sandstone));
-        data.add(new Data("resources","Soapstone", R.drawable.soapstone));
-        data.add(new Data("resources","Star Shards", R.drawable.star_shards));
-        data.add(new Data("resources","Slate", R.drawable.slate));
-        data.add(new Data("resources","Thunder Egg", R.drawable.thunder_egg));
-        data.add(new Data("resources","Tigerseye", R.drawable.tigerseye));
-        data.add(new Data("resources","Topaz", R.drawable.topaz));
-
+            data.add(new Data("resources","Hematite", R.drawable.hematite));
+            data.add(new Data("resources","Amethyst", R.drawable.amethyst));
+            data.add(new Data("resources","Lemon Stone", R.drawable.lemon_stone));
+            data.add(new Data("resources","Frozen Tear", R.drawable.frozen_tear));
+            data.add(new Data("resources","Helvite", R.drawable.helvite));
+            data.add(new Data("resources","Jasper", R.drawable.jasper));
+            data.add(new Data("resources","Granite", R.drawable.granite));
+            data.add(new Data("resources","Obsidian", R.drawable.obsidian));
+            data.add(new Data("resources","Dolomite", R.drawable.dolomite));
+            data.add(new Data("resources","Malachite", R.drawable.malachite));
+            data.add(new Data("resources","Aerinite", R.drawable.aerinite));
+            data.add(new Data("resources","Marble", R.drawable.marble));
+            data.add(new Data("resources","Fairy Stone", R.drawable.fairy_stone));
+            data.add(new Data("resources","Lunarite", R.drawable.lunarite));
+            data.add(new Data("resources","Basalt", R.drawable.basalt));
+            data.add(new Data("resources","Fluorapatite", R.drawable.fluorapatite));
+            data.add(new Data("resources","Baryte", R.drawable.baryte));
+            data.add(new Data("resources","Ocean Stone", R.drawable.ocean_stone));
+            data.add(new Data("resources","Esperite", R.drawable.esperite));
+            data.add(new Data("resources","Alamite", R.drawable.alamite));
+            data.add(new Data("resources","Jagoite", R.drawable.jagoite));
+            data.add(new Data("resources","Neptunite", R.drawable.neptunite));
+            data.add(new Data("resources","Kyanite", R.drawable.kyanite));
+            data.add(new Data("resources","Fire Opal", R.drawable.fire_opal));
+            data.add(new Data("resources","Jamborite", R.drawable.jamborite));
+            data.add(new Data("resources","Bixite", R.drawable.bixite));
+            data.add(new Data("resources","Aquamarine", R.drawable.aquamarine));
+            data.add(new Data("resources","Limestone", R.drawable.limestone));
+            data.add(new Data("resources","Calcite", R.drawable.calcite));
+            data.add(new Data("resources","Jade", R.drawable.jade));
+            data.add(new Data("resources","Fire Quartz", R.drawable.fire_quartz));
+            data.add(new Data("resources","Diamond", R.drawable.diamond));
+            data.add(new Data("resources","Geminite", R.drawable.geminite));
+            data.add(new Data("resources","Nekoite", R.drawable.nekoite));
+            data.add(new Data("resources","Earth Crystal", R.drawable.earth_crystal));
+            data.add(new Data("resources","Mudstone", R.drawable.mudstone));
+            data.add(new Data("resources","Celestine", R.drawable.celestine));
+            data.add(new Data("resources","Opal", R.drawable.opal));
+            data.add(new Data("resources","Emerald", R.drawable.emerald));
+            data.add(new Data("resources","Orpiment", R.drawable.orpiment));
+            data.add(new Data("resources","Petrified Slime", R.drawable.petrified_slime));
+            data.add(new Data("resources","Prismatic Shard", R.drawable.prismatic_shard));
+            data.add(new Data("resources","Pyrite", R.drawable.pyrite));
+            data.add(new Data("resources","Quartz", R.drawable.quartz));
+            data.add(new Data("resources","Ruby", R.drawable.ruby));
+            data.add(new Data("resources","Sandstone", R.drawable.sandstone));
+            data.add(new Data("resources","Soapstone", R.drawable.soapstone));
+            data.add(new Data("resources","Star Shards", R.drawable.star_shards));
+            data.add(new Data("resources","Slate", R.drawable.slate));
+            data.add(new Data("resources","Thunder Egg", R.drawable.thunder_egg));
+            data.add(new Data("resources","Tigerseye", R.drawable.tigerseye));
+            data.add(new Data("resources","Topaz", R.drawable.topaz));
         }
-
     }
 
     @Override
@@ -348,15 +345,7 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
             webActivity.putExtra("itemType", itemTypeClickedOn);
             webActivity.putExtra("title", title);
             startActivity(webActivity);
-
-
-
-
     }
-
-
-
-
 
     public void setTitle(String title) {
         getActivity().setTitle(title);

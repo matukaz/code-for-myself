@@ -7,9 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.revmob.RevMob;
 import com.revmob.RevMobAdsListener;
 
@@ -100,27 +103,18 @@ public class WebActivity extends AppCompatActivity {
     }
     public void showAds(){
 
-        currentActivity = this;
-        revmob = RevMob.startWithListener(this, new RevMobAdsListener() {
+        final AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        //   AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new com.google.android.gms.ads.AdListener() {
             @Override
-            public void onRevMobSessionIsStarted() {
-                revmob.showBanner(currentActivity);
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                mAdView.setVisibility(View.VISIBLE);
             }
         });
-
-
-//        final AdView mAdView = (AdView) findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//
-//        //   AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
-//        mAdView.setAdListener(new com.google.android.gms.ads.AdListener() {
-//            @Override
-//            public void onAdLoaded() {
-//                super.onAdLoaded();
-//                mAdView.setVisibility(View.VISIBLE);
-//            }
-//        });
 
     }
 

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.amplitude.api.Amplitude;
+import com.teddydeveloper.stardewvalleywiki.Map.MapActivity;
 
 import java.util.ArrayList;
 import java.util.List;
