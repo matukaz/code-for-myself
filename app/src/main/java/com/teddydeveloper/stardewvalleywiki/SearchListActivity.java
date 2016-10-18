@@ -31,13 +31,8 @@ public class SearchListActivity extends AppCompatActivity {
         }
     }
 
-
-
-
     @Override
     public void onBackPressed() {
         finish();
     }
-
-
 }

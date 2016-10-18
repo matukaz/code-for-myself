@@ -75,7 +75,7 @@ public class WebActivity extends AppCompatActivity {
         }
 
         else if(itemType.toLowerCase().equals("npc")){
-           // showAds();
+            showAds();
             webView.loadUrl("file:///android_asset/html/" + title.toLowerCase() + ".html");
         }
         else if(itemType.toLowerCase().equals("crop")){
