@@ -1,19 +1,13 @@
 package com.teddydeveloper.stardewvalleywiki.Notifications;
 
-import android.app.PendingIntent;
-import android.content.Intent;
-import android.net.Uri;
-import android.util.Log;
-
-import com.google.firebase.messaging.FirebaseMessagingService;
-import com.google.firebase.messaging.RemoteMessage;
 
 /**
  * Created by Matu on 03.10.2016.
  * https://firebase.google.com/docs/notifications/android/console-audience?utm_source=studio#receive_and_handle_notifications
  */
 
-public class MyFirebaseMessagingService extends FirebaseMessagingService {
+public class MyFirebaseMessagingService  { /**
+    extends FirebaseMessagingService
     private static final String TAG = "FCM Service";
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -35,5 +29,5 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         } else {
             NotificationsImpl.notify(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody() +remoteMessage.getData().containsKey("link"), getBaseContext());
         }
-    }
+    } */
 }

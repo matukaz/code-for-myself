@@ -11,6 +11,7 @@ import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
+import com.adcash.mobileads.ui.AdcashBannerView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.revmob.RevMob;
@@ -24,6 +25,8 @@ public class WebActivity extends AppCompatActivity {
 
     private RevMob revmob;
     private Activity currentActivity;
+
+    private AdcashBannerView mBanner;
 
 
     private final String LOG_TAG = WebActivity.class.getSimpleName();
@@ -75,7 +78,7 @@ public class WebActivity extends AppCompatActivity {
         }
 
         else if(itemType.toLowerCase().equals("npc")){
-            showAds();
+
             webView.loadUrl("file:///android_asset/html/" + title.toLowerCase() + ".html");
         }
         else if(itemType.toLowerCase().equals("crop")){
@@ -103,6 +106,7 @@ public class WebActivity extends AppCompatActivity {
     }
     public void showAds(){
 
+        /**
         final AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
 
@@ -115,9 +119,15 @@ public class WebActivity extends AppCompatActivity {
                 mAdView.setVisibility(View.VISIBLE);
             }
         });
-
+ */
     }
 
+    @Override
+    protected void onDestroy() {
+     //   mBanner.destroy();
+        super.onDestroy();
+
+    }
 
     public static String toTitleCase(String givenString) {
         String[] arr = givenString.split(" ");
@@ -151,6 +161,8 @@ public class WebActivity extends AppCompatActivity {
 
            finish();
        }
+
+
 
     }
 }

@@ -60,12 +60,13 @@
         </activity>
 
         <!-- [START firebase_service] -->
+        <!--
         <service
             android:name=".Notifications.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
-        </service>
+        </service> -->
         <!-- [END firebase_service] -->
 
         <!-- RevMob Media ID -->

@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
         ImageButton closeBtn = (ImageButton) findViewById(R.id.google_form_close_btn);
+
+
         final CardView googleFormCardView = (CardView) findViewById(R.id.google_form_cardview);
         if (!isGoogleFormVisible()) {
             googleFormCardView.setVisibility(View.VISIBLE);
@@ -110,6 +112,8 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
         adapter.setmDataAdapterClickListener(this);
         //recyclerView.setDataListdapterClickListener(this);
+
+        googleFormCardView.setVisibility(View.GONE);
 
     }
 
