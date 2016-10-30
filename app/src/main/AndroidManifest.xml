@@ -47,12 +47,15 @@
         <activity
             android:name=".RssFeedActivity"
             android:label="@string/title_activity_rss_feed"
-            android:theme="@style/AppTheme"></activity>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Giveaway.GiveAwayActivity"
             android:label="Giveaway"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Artifacts.DataDetailsActivity"
+            android:label="Artifacts"
+            android:theme="@style/AppTheme" />
         <!-- Declare RevMob Fullscreen activity if you want to use Fullscreen, Video and/or Rewarded Video ads -->
         <activity android:name="com.revmob.FullscreenActivity"
             android:theme="@android:style/Theme.Translucent"

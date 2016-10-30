@@ -1,0 +1,288 @@
+[ {
+  "itemType" : "artifacts",
+  "title" : "Dwarf Scroll I",
+  "image" : "Dwarf_Scroll_I",
+  "description" : "A yellowed scroll of parchment filled with dwarven script. This one's tied with a red bow.",
+  "price" : "1g",
+  "itemLocation" : "Mines level 1-120 \nGreen Slime (Secret Woods)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Dwarf Scroll II",
+  "image" : "Dwarf_Scroll_II",
+  "description" : "A yellowed scroll of parchment filled with dwarven script. This one's tied with a green ribbon.",
+  "price" : "1g",
+  "itemLocation" : "Frost Bat (Mines level 40-65)\nDust Sprite (Mines level 40-79)\nBlue Slime (Secret Woods or Mines)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Dwarf Scroll III",
+  "image" : "Dwarf_Scroll_III",
+  "description" : "A yellowed scroll of parchment filled with dwarven script. This one's tied with a blue rope.",
+  "price" : "1g",
+  "itemLocation" : "Mines level 40+\nFrost Bat (Mines level 40-65)\nLava Bat (Mines Level 81+)\nBlue Slime (Secret Woods or Mines)\nSkull Cavern"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Dwarf Scroll IV",
+  "image" : "Dwarf_Scroll_IV",
+  "description" : "A yellowed scroll of parchment filled with dwarven script. This one's tied with a golden chain.",
+  "price" : "1g",
+  "itemLocation" : "Any Monster (Mines)\nUsing hoe on dirt (Mines level 81+)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Chipped Amphora",
+  "image" : "Chipped_Amphora",
+  "description" : "An ancient vessel made of ceramic material. Used to transport both dry and wet goods.",
+  "price" : "40g",
+  "itemLocation" : "Town (4%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Arrowhead",
+  "image" : "Arrowhead",
+  "description" : "A crudely fashioned point used for hunting.",
+  "price" : "40g",
+  "itemLocation" : "Mountain (2%)\nForest (2%)\nBus Stop (2%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Ancient Doll",
+  "image" : "Ancient_Doll",
+  "description" : "An ancient doll covered in grime. This doll may have been used as a toy, a decoration, or a prop in some kind of ritual.",
+  "price" : "60g",
+  "itemLocation" : "Mountain (4%)\nForest (3%)\nBus Stop (3%)\nTown (1%)\nFishing Chest (0.16%-0.18%)\nMines (?%)\n<a href=\"/Feast_of_the_Winter_Star\" title=\"Feast of the Winter Star\">Feast of the Winter Star</a>"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Elvish Jewelry",
+  "image" : "Elvish_Jewelry",
+  "description" : "Dirty but still beautiful. On the side is a flowing script thought by some to be the ancient language of the elves. No Elvish bones have ever been found.",
+  "price" : "200g",
+  "itemLocation" : "Forest (1%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Chewing Stick",
+  "image" : "Chewing_Stick",
+  "description" : "Ancient people chewed on these to keep their teeth clean.",
+  "price" : "50g",
+  "itemLocation" : "Mountain (2%)\nForest (2%)\nTown (1%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Ornamental Fan",
+  "image" : "Ornamental_Fan",
+  "description" : "This exquisute fan most likely belonged to a noblewoman. Historians believe that the valley was a popular sixth-era vacation spot for the wealthy.",
+  "price" : "300g",
+  "itemLocation" : "Beach (2%)\nForest (1%)\nTown (0.8%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Dinosaur Egg",
+  "image" : "Dinosaur_Egg",
+  "description" : "A giant dino egg... The entire shell is still intact!",
+  "price" : "350g",
+  "itemLocation" : "Mine (1%)\nMountain (0.8%)\nFishing chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Rare Disc",
+  "image" : "Rare_Disc",
+  "description" : "A heavy black disc studded with peculiar red stones. When you hold it, you're overwhelmed with a feeling of dread.",
+  "price" : "300g",
+  "itemLocation" : "Underground Mine (1%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Ancient Sword",
+  "image" : "Ancient_Sword",
+  "description" : "It's the remains of an ancient sword. Most of the blade has turned to rust, but the hilt is very finely crafted.",
+  "price" : "100g",
+  "itemLocation" : "Forest (1%)\nMountain (0.8%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Rusty Spoon",
+  "image" : "Rusty_Spoon",
+  "description" : "A plain old spoon, probably ten years old. Not very interesting.",
+  "price" : "25g",
+  "itemLocation" : "Town (5%)\nFishing Chest (0.16%-0.18%)\nMines (Dirt)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Rusty Spur",
+  "image" : "Rusty_Spur",
+  "description" : "An old spur that was once attached to a cowboy's boot. People must have been raising animals in this area for many generations.",
+  "price" : "25g",
+  "itemLocation" : "Fishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Rusty Cog",
+  "image" : "Rusty_Cog",
+  "description" : "A well preserved cog that must have been part of some ancient machine. This could be dwarven technology.",
+  "price" : "25g",
+  "itemLocation" : "Mountain (5%)\nMine ~14 in dirt\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Chicken Statue",
+  "image" : "Chicken_Statue",
+  "description" : "It's a statue of a chicken on a bronze base. The ancient people of this area must have been very fond of chickens.",
+  "price" : "50g",
+  "itemLocation" : "Fishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Ancient Seed",
+  "image" : "Ancient_Seed",
+  "description" : "It's a dry old seed from some ancient plant. By all appearances it's long since dead...",
+  "price" : "5g",
+  "itemLocation" : "Forest (1%)\nMountain (1%)\nFishing Chest (0.16%-0.18%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a>\nMonster drop (<a href=\"/Bug\" title=\"Bug\">Bug</a>, <a href=\"/Grub\" title=\"Grub\">Grub</a>, Fly: 0.5%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Prehistoric Tool",
+  "image" : "Prehistoric_Tool",
+  "description" : "Some kind of gnarly old digging tool.",
+  "price" : "50g",
+  "itemLocation" : "Bus Stop (4%)\nMountain (3%)\nForest (3%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Dried Starfish",
+  "image" : "Dried_Starfish",
+  "description" : "A starfish from the primordial ocean. It's an unusually pristine specimen!",
+  "price" : "40g",
+  "itemLocation" : "Beach (10%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Anchor",
+  "image" : "Anchor",
+  "description" : "It may have belonged to ancient pirates.",
+  "price" : "100g",
+  "itemLocation" : "Beach (5%)\nFishing Chest (unknown)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Glass Shards",
+  "image" : "Glass_Shards",
+  "description" : "A mixture of glass shards smoothed by centuries of ocean surf. These could have belonged to an ancient mosaic or necklace.",
+  "price" : "20g",
+  "itemLocation" : "Beach (10%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Bone Flute",
+  "image" : "Bone_Flute",
+  "description" : "It's a prehistoric wind instrument carved from an animal's bone. It produces an eerie tone.",
+  "price" : "100g",
+  "itemLocation" : "Underground Mine (2%)\nMountain (1%)\nForest (1%)\nTown (0.5%)\nFishing Chest (0.16%-0.18%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Prehistoric Handaxe",
+  "image" : "Prehistoric_Handaxe",
+  "description" : "One of the earliest tools employed by humans. This \"crude\" tool was created by striking one rock with another to form a sharp edge.",
+  "price" : "50g",
+  "itemLocation" : "Mountain (5%)\nForest (5%)\nBus Stop (5%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Dwarvish Helm",
+  "image" : "Dwarvish_Helm",
+  "description" : "It's one of the helmets commonly worn by dwarves. The thick metal plating protects them from falling debris and stalactites.",
+  "price" : "100g",
+  "itemLocation" : "Underground Mine (1%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a> (1.2%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Dwarf Gadget",
+  "image" : "Dwarf_Gadget",
+  "description" : "It's a piece of the advanced technology once known to the dwarves. It's still glowing and humming, but you're unable to understand how it works.",
+  "price" : "200g",
+  "itemLocation" : "Underground Mine (0.1%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a> (1.2%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Ancient Drum",
+  "image" : "Ancient_Drum",
+  "description" : "It's a drum made from wood and animal skin. It has a low, reverberating tone.",
+  "price" : "100g",
+  "itemLocation" : "Underground Mine (2%)\nBus Stop (1%)\nForest (1%)\nTown (0.5%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a> (1.2%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Golden Mask",
+  "image" : "Golden_Mask",
+  "description" : "A creepy golden mask probably used in an ancient magic ritual. A socket in the forehead contains a large purple gemstone.",
+  "price" : "500g",
+  "itemLocation" : "Desert (4%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Golden Relic",
+  "image" : "Golden_Relic",
+  "description" : "It's a golden slab with heiroglyphs and pictures emblazoned onto the front.",
+  "price" : "250g",
+  "itemLocation" : "Desert (8%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Strange Doll (Green)",
+  "image" : "Strange_Doll_Green",
+  "description" : "???",
+  "price" : "1,000g",
+  "itemLocation" : "Everywhere (0.1%)\nSkull Cavern (Hoeing/Bombing soft ground)\nMines (Using hoe on dirt)\nFishing Chest (0.08%+ chance)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Strange Doll (Yellow)",
+  "image" : "Strange_Doll_Yellow",
+  "description" : "???",
+  "price" : "1,000g",
+  "itemLocation" : "Everywhere (0.1%)\nSkull Cavern (Hoeing/Bombing soft ground)\nMines (Using hoe on dirt)\nFishing Chest (0.08%+ chance)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Prehistoric Scapula",
+  "image" : "Prehistoric_Scapula",
+  "description" : "Commonly known as a \"shoulder blade\"... It's unclear what species it belonged to.",
+  "price" : "100g",
+  "itemLocation" : "Town (1%)\nForest (?%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Prehistoric Tibia",
+  "image" : "Prehistoric_Tibia",
+  "description" : "A thick and sturdy leg bone.",
+  "price" : "100g",
+  "itemLocation" : "Forest (1%)\nRailroad (?%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Prehistoric Skull",
+  "image" : "Prehistoric_Skull",
+  "description" : "This is definitely a mammalian skull.",
+  "price" : "100g",
+  "itemLocation" : "Mountain (1%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Skeletal Hand",
+  "image" : "Skeletal_Hand",
+  "description" : "It's a wonder all these ancient little pieces lasted so long.",
+  "price" : "100g",
+  "itemLocation" : "Beach (1%)\nBackwoods (?%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Prehistoric Rib",
+  "image" : "Prehistoric_Rib",
+  "description" : "Little gouge marks on the side suggest that this rib was someone's dinner.",
+  "price" : "100g",
+  "itemLocation" : "Town (1%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Prehistoric Vertebra",
+  "image" : "Prehistoric_Vertebra",
+  "description" : "A segment of some prehistoric creature's spine.",
+  "price" : "100g",
+  "itemLocation" : "Bus Stop (1%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Skeletal Tail",
+  "image" : "Skeletal_Tail",
+  "description" : "It's pretty short for a tail.",
+  "price" : "100g",
+  "itemLocation" : "Underground Mine (1%)\nFishing Chest (1.8%-2%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Nautilus Fossil",
+  "image" : "Nautilus_Fossil",
+  "description" : "This must've washed up ages ago from an ancient coral reef.",
+  "price" : "80g",
+  "itemLocation" : "Beach (3%)\nFishing Chest (1.8%-2%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Amphibian Fossil",
+  "image" : "Amphibian_Fossil",
+  "description" : "The relatively short hind legs suggest some kind of primordial toad.",
+  "price" : "150g",
+  "itemLocation" : "Forest (1%)\nMountain (1%)\nFishing Chest (1.8%-2%)"
+}, {
+  "itemType" : "artifacts",
+  "title" : "Palm Fossil",
+  "image" : "Palm_Fossil",
+  "description" : "Palm Fossils are relatively common, but this happens to be a particularly well-preserved specimen.",
+  "price" : "100g",
+  "itemLocation" : "Forest (1%)\nBeach (1%)\nDesert (1%)"
+} ]

@@ -17,9 +17,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.amplitude.api.Amplitude;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.teddydeveloper.stardewvalleywiki.Artifacts.DataDetailsActivity;
+import com.teddydeveloper.stardewvalleywiki.Json.Json;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.teddydeveloper.stardewvalleywiki.Models.DataFiles.ARTIFACTS;
+import static com.teddydeveloper.stardewvalleywiki.Models.DataFiles.RINGS;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -36,6 +44,8 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
     View view;
     RecyclerView recyclerView;
     Toolbar toolbar;
+
+    private List<?> artifactses = null;
 
     SearchDataAdapter adapter2;
 
@@ -331,20 +341,58 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
             data.add(new Data("resources","Tigerseye", R.drawable.tigerseye));
             data.add(new Data("resources","Topaz", R.drawable.topaz));
         }
+        else if(itemType.toLowerCase().equals(ARTIFACTS.getName())){
+            Log.d("ARTIFACTS!!!" +itemType.toLowerCase(), LOG_TAG);
+            String json = Json.JSONFileToString(getContext(), ARTIFACTS.getJsonFileLocation());
+            jsonToDataObject(json);
+        }
+        else if(itemType.toLowerCase().equals(RINGS.getName())){
+            Log.d("RINGS!!!" +itemType.toLowerCase(), LOG_TAG);
+            String json = Json.JSONFileToString(getContext(), "json/Rings.json");
+            jsonToDataObject(json);
+        }
+    }
+
+    private void jsonToDataObject(String json) {
+        // JSON String to object
+        ObjectMapper mapper = new ObjectMapper();
+        // delete me and refactor me to function
+        try {
+            data = mapper.readValue(json, new TypeReference<List<Data>>(){});
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for(Data item: data) {
+            item.setPhotoId(getContext().getResources().getIdentifier(item.getImage().toLowerCase(), "drawable", getContext().getPackageName()));
+        }
     }
 
     @Override
     public void itemClicked(View view, int position) {
-        //adapter2.getData();
-
         Log.d("itemClicked" + view.toString(),LOG_TAG);
         String itemTypeClickedOn = adapter2.getData().get(position).getItemType();
         String title = adapter2.getData().get(position).getTitle();
         Amplitude.getInstance().logEvent("itemClicked" + itemTypeClickedOn);
-         Intent webActivity = new Intent(getActivity(), WebActivity.class);
-            webActivity.putExtra("itemType", itemTypeClickedOn);
-            webActivity.putExtra("title", title);
-            startActivity(webActivity);
+
+        switch (adapter2.getData().get(position).getItemType().toLowerCase()) {
+            case "artifacts":
+                Intent intent = new Intent(getActivity(), DataDetailsActivity.class);
+                intent.putExtra("data", adapter2.getData().get(position));
+                startActivity(intent);
+                break;
+            case "rings":
+                Intent ringsIntent = new Intent(getActivity(), DataDetailsActivity.class);
+                ringsIntent.putExtra("data", adapter2.getData().get(position));
+                startActivity(ringsIntent);
+                break;
+            default:
+                Log.d(LOG_TAG, "ITEM WAS: " + adapter2.getData().get(position).toString().toLowerCase());
+                Intent webActivity = new Intent(getActivity(), WebActivity.class);
+                webActivity.putExtra("itemType", itemTypeClickedOn);
+                webActivity.putExtra("title", title);
+                startActivity(webActivity);
+                break;
+        }
     }
 
     public void setTitle(String title) {
@@ -370,7 +418,7 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
 
         final List<Data> filteredModelList = new ArrayList<>();
         for (Data model : models) {
-            final String text = model.getText().toLowerCase();
+            final String text = model.getTitle().toLowerCase();
             if (text.contains(query)) {
                 filteredModelList.add(model);
             }

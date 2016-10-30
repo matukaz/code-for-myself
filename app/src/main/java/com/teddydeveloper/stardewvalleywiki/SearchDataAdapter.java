@@ -33,7 +33,7 @@ public class SearchDataAdapter extends RecyclerView.Adapter<SearchDataAdapter.Da
     }
 
 
-    SearchDataAdapter(List<Data> data){
+    public SearchDataAdapter(List<Data> data){
         this.data = new ArrayList<>(data);
     }
 

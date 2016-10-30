@@ -26,7 +26,7 @@ public class DetailedAdapter extends RecyclerView.Adapter<DetailedAdapter.DataVi
     }
 
 
-    DetailedAdapter(List<Data> data){
+    public DetailedAdapter(List<Data> data){
         this.data = data;
     }
 
@@ -42,7 +42,7 @@ public class DetailedAdapter extends RecyclerView.Adapter<DetailedAdapter.DataVi
     public void onBindViewHolder(DataViewHolder holder, int position) {
         holder.title.setText(data.get(position).getTitle());
         holder.image.setImageResource(data.get(position).photoId);
-        holder.description.setText(Html.fromHtml(data.get(position).getDetailedText()));
+        holder.description.setText(Html.fromHtml(data.get(position).getDescription()));
     }
 
     public interface DetailedAdapterClickListener {

@@ -23,8 +23,6 @@ import android.widget.ImageButton;
 
 import com.adcash.mobileads.ui.AdcashInterstitial;
 import com.amplitude.api.Amplitude;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.teddydeveloper.stardewvalleywiki.Const.Const;
 import com.teddydeveloper.stardewvalleywiki.Giveaway.GiveAwayActivity;
 import com.teddydeveloper.stardewvalleywiki.Map.MapActivity;
@@ -142,6 +140,7 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data("npc", "Npc", R.drawable.abigail_icon));
         data.add(new Data("seasons", "Calendar & Seasons", R.drawable.main_calendar));
         data.add(new Data("crop", "Crops & Fruits", R.drawable.parsnip));
+        data.add(new Data("artifacts", "Artifacts", R.drawable.arrowhead));
         data.add(new Data("items", "Items", R.drawable.main_items));
         data.add(new Data("resources", "Resources & Minerals", R.drawable.coal));
         data.add(new Data("food", "Food", R.drawable.food));
@@ -149,8 +148,10 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data("animals", "Animals", R.drawable.cow));
         data.add(new Data("boots", "Boots", R.drawable.boots));
         data.add(new Data("hats", "Hats", R.drawable.hats));
+        data.add(new Data("rings", "Rings", R.drawable.vampire_ring));
         data.add(new Data("map", "Map", R.drawable.main_map));
         data.add(new Data("links", "Useful links", R.drawable.url));
+
 
 
      //   data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
@@ -248,7 +249,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(listActivity);
 
 
-        } else if (itemTypeClickedOn == "npc" || itemTypeClickedOn == "food" || itemTypeClickedOn == "crop" || itemTypeClickedOn == "resources") {
+        } else if (itemTypeClickedOn == "npc" || itemTypeClickedOn == "food" || itemTypeClickedOn == "crop" || itemTypeClickedOn == "resources" || itemTypeClickedOn.toLowerCase().equals("artifacts") || itemTypeClickedOn.toLowerCase().equals("rings")) {
             Log.d("List!", LOG_TAG);
             Intent listActivity = new Intent(this, SearchListActivity.class);
             listActivity.putExtra("itemType", itemTypeClickedOn);
@@ -264,6 +265,5 @@ public class MainActivity extends AppCompatActivity
             listActivity.putExtra("itemType", itemTypeClickedOn);
             startActivity(new Intent(listActivity));
         }
-
     }
 }

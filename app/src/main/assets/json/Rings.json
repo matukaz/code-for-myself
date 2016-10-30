@@ -1,0 +1,191 @@
+[ {
+  "itemType" : "rings",
+  "title" : "Small Glow Ring",
+  "image" : "Small_Glow_Ring",
+  "description" : "Emits a small, constant light.",
+  "effect" : "Emits 5 radius circle of light. Light effect stacks with other glow rings.",
+  "sellingPrice" : "50g",
+  "buyingPrice" : "",
+  "itemLocation" : "Killing Slimes in The Mines before level 40 Treasure Chests found from Fishing Reward for completing the Night Fishing Bundle.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Glow Ring",
+  "image" : "Glow_Ring",
+  "description" : "Emits a constant light.",
+  "effect" : "Emits 10 radius circle of light. Light effect stacks with other glow rings.",
+  "sellingPrice" : "100g",
+  "buyingPrice" : "",
+  "itemLocation" : "Killing Slimes in The Mines after level 40 or Skeleton in The Mines level 70-79. It can also be received as loot by destroying various barrels and boxes in The Mines .",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Small Magnet Ring",
+  "image" : "Small_Magnet_Ring",
+  "description" : "Slightly increases your radius for collecting items.",
+  "effect" : "Increases the radius the player collects items in by one tile. Stacks with itself and the normal Magnet Ring and the Iridium Band.",
+  "sellingPrice" : "50g",
+  "buyingPrice" : "",
+  "itemLocation" : "Reward for completing the Adventurer's Bundle Treasure Chests found from Fishing",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Magnet Ring",
+  "image" : "Magnet_Ring",
+  "description" : "Increases your radius for collecting items.",
+  "effect" : "Increases the radius the player collects items in by two tiles. Stacks with itself and the Small Magnet Ring and the Iridium Band.",
+  "sellingPrice" : "100g",
+  "buyingPrice" : "",
+  "itemLocation" : "Drops from enemies in The Mines between levels 40-80. It can also be received as loot by destroying various barrels and boxes in The Mines .",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Slime Charmer Ring",
+  "image" : "Slime_Charmer_Ring",
+  "description" : "Prevents damage from slimes.",
+  "effect" : "Prevents damage from slimes and prevents slime debuff.",
+  "sellingPrice" : "350g",
+  "buyingPrice" : "",
+  "itemLocation" : "Reward for eradicating 1000 slimes at the Adventurer's Guild.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Warrior Ring",
+  "image" : "Warrior_Ring",
+  "description" : "Occasionally infuses the wearer with \"Warrior Energy\" after slaying a monster.",
+  "effect" : "Has a chance of giving the Warrior Energy buff after slaying a monster.",
+  "sellingPrice" : "750g",
+  "buyingPrice" : "",
+  "itemLocation" : "Crafted, Combat Level 4",
+  "ingredients" : "Iron Bar (10) Coal (25) Frozen Tear (10)"
+}, {
+  "itemType" : "rings",
+  "title" : "Vampire Ring",
+  "image" : "Vampire_Ring",
+  "description" : "Gain a little health every time you slay a monster.",
+  "effect" : "Restores 2 health after slaying a monster.",
+  "sellingPrice" : "750g",
+  "buyingPrice" : "",
+  "itemLocation" : "Reward for eradicating 200 bats at the Adventurer's Guild.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Savage Ring",
+  "image" : "Savage_Ring",
+  "description" : "Gain a short speed boost whenever you slay a monster.",
+  "effect" : "Gives a 2 second +2 speed buff (Adrenaline Rush Status) after slaying a monster.",
+  "sellingPrice" : "750g",
+  "buyingPrice" : "",
+  "itemLocation" : "Reward for eradicating 150 Void Spirits at the Adventurer's Guild.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Ring of Yoba",
+  "image" : "Ring_of_Yoba",
+  "description" : "Occasionally shields the wearer from damage.",
+  "effect" : "Has a chance of giving the Yoba's Blessing buff after taking damage. The lower your health and the higher your luck, the higher the chance of receiving this buff.",
+  "sellingPrice" : "750g",
+  "buyingPrice" : "",
+  "itemLocation" : "Crafted, Combat Level 7",
+  "ingredients" : "Iron Bar (5) Gold Bar (5) Diamond (1)"
+}, {
+  "itemType" : "rings",
+  "title" : "Sturdy Ring",
+  "image" : "Sturdy_Ring",
+  "description" : "Cuts the duration of negative status effects in half.",
+  "effect" : "Like the description says, when the player wears this ring, the duration of debuffs (slimed debuff, jinxed debuff, etc.) are cut in half.",
+  "sellingPrice" : "750g",
+  "buyingPrice" : "",
+  "itemLocation" : "Crafted, Combat Level 1",
+  "ingredients" : "Copper Bar (10) Refined Quartz (5) Earth Crystal (10)"
+}, {
+  "itemType" : "rings",
+  "title" : "Burglar's Ring",
+  "image" : "Burglars_Ring",
+  "description" : "Monsters have a greater chance of dropping loot.",
+  "effect" : "Monsters drop items more often. The game rolls twice on the monster's drop table when equipped so items have a chance to drop twice.",
+  "sellingPrice" : "750g",
+  "buyingPrice" : "",
+  "itemLocation" : "Reward for eradicating 500 Dust Sprites at the Adventurer's Guild.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Iridium Band",
+  "image" : "Iridium_Band",
+  "description" : "Glows, attracts items, and increases attack damage by 10%.",
+  "effect" : "Combines the effect of the Glow Ring, the Magnet Ring, and the Ruby Ring.",
+  "sellingPrice" : "2,000g",
+  "buyingPrice" : "",
+  "itemLocation" : "Crafted, Combat Level 9 Treasure Chests found from Fishing",
+  "ingredients" : "Iridium Bar (5) Solar Essence (50) Void Essence (50)"
+}, {
+  "itemType" : "rings",
+  "title" : "Jukebox Ring",
+  "image" : "Jukebox_Ring",
+  "description" : "Plays a random assortment of music you've heard.",
+  "effect" : "Unknown.",
+  "sellingPrice" : "100g",
+  "buyingPrice" : "",
+  "itemLocation" : "Unknown.",
+  "ingredients" : "Unknown."
+}, {
+  "itemType" : "rings",
+  "title" : "Amethyst Ring",
+  "image" : "Amethyst_Ring",
+  "description" : "Increases knockback by 10%.",
+  "effect" : "Increases knockback by 10%.",
+  "sellingPrice" : "100g",
+  "buyingPrice" : "1,000g",
+  "itemLocation" : "Purchased from Adventurer's Guild after completing \"Initiation\".",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Topaz Ring",
+  "image" : "Topaz_Ring",
+  "description" : "Increases weapon precision by 10%.",
+  "effect" : "Increases weapon precision by 10%.",
+  "sellingPrice" : "100g",
+  "buyingPrice" : "1,000g",
+  "itemLocation" : "Purchased from Adventurer's Guild after completing \"Initiation\".",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Aquamarine Ring",
+  "image" : "Aquamarine_Ring",
+  "description" : "Increases critical strike chance by 10% (Multiplicative, like the Scout skill).",
+  "effect" : "Increases critical strike chance by 10% (Multiplicative, like the Scout skill).",
+  "sellingPrice" : "200g",
+  "buyingPrice" : "2,500g",
+  "itemLocation" : "Purchased from Adventurer's Guild after reaching level 40 in The Mines.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Jade Ring",
+  "image" : "Jade_Ring",
+  "description" : "Increases critical strike power by 10%.",
+  "effect" : "Increases critical strike power by 10%.",
+  "sellingPrice" : "200g",
+  "buyingPrice" : "2,500g",
+  "itemLocation" : "Purchased from Adventurer's Guild after reaching level 40 in The Mines.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Emerald Ring",
+  "image" : "Emerald_Ring",
+  "description" : "Increases weapon speed by 10%.",
+  "effect" : "Increases weapon speed by 10%.",
+  "sellingPrice" : "300g",
+  "buyingPrice" : "5,000g",
+  "itemLocation" : "Purchased from Adventurer's Guild after reaching level 40 in The Mines.",
+  "ingredients" : "N/A"
+}, {
+  "itemType" : "rings",
+  "title" : "Ruby Ring",
+  "image" : "Ruby_Ring",
+  "description" : "Increases attack by 10%.",
+  "effect" : "Increases attack by 10%.",
+  "sellingPrice" : "300g",
+  "buyingPrice" : "5,000g",
+  "itemLocation" : "Purchased from Adventurer's Guild after reaching level 80 in The Mines.",
+  "ingredients" : "N/A"
+} ]
