@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Mr._Qi",
+  "image" : "mr_qi",
+  "details" : {
+    "Birthday:" : "N/A",
+    "Lives In:" : "Calico Desert",
+    "Address:" : "Casino",
+    "Marriage:" : "No"
+  }
+}]

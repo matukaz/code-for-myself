@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Alex",
+  "image" : "alex",
+  "details" : {
+    "Birthday:" : "Summer 13",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "1 River Road",
+    "Family:" : "George (Grandfather) Evelyn (Grandmother)",
+    "Friends:" : "Haley",
+    "Marriage:" : "Yes"
+  }
+}]

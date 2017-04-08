@@ -46,7 +46,7 @@
   "image" : "Ancient_Doll",
   "description" : "An ancient doll covered in grime. This doll may have been used as a toy, a decoration, or a prop in some kind of ritual.",
   "price" : "60g",
-  "itemLocation" : "Mountain (4%)\nForest (3%)\nBus Stop (3%)\nTown (1%)\nFishing Chest (0.16%-0.18%)\nMines (?%)\n<a href=\"/Feast_of_the_Winter_Star\" title=\"Feast of the Winter Star\">Feast of the Winter Star</a>"
+  "itemLocation" : "Mountain (4%)\nForest (3%)\nBus Stop (3%)\nTown (1%)\nFishing Chest (0.16%-0.18%)\nMines (?%)\n>Feast of the Winter Star>"
 }, {
   "itemType" : "artifacts",
   "title" : "Elvish Jewelry",
@@ -123,7 +123,7 @@
   "image" : "Ancient_Seed",
   "description" : "It's a dry old seed from some ancient plant. By all appearances it's long since dead...",
   "price" : "5g",
-  "itemLocation" : "Forest (1%)\nMountain (1%)\nFishing Chest (0.16%-0.18%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a>\nMonster drop (<a href=\"/Bug\" title=\"Bug\">Bug</a>, <a href=\"/Grub\" title=\"Grub\">Grub</a>, Fly: 0.5%)"
+  "itemLocation" : "Forest (1%)\nMountain (1%)\nFishing Chest (0.16%-0.18%)\nOmni Geode\nMonster drop (Bug, Grub, Fly: 0.5%)"
 }, {
   "itemType" : "artifacts",
   "title" : "Prehistoric Tool",
@@ -172,21 +172,21 @@
   "image" : "Dwarvish_Helm",
   "description" : "It's one of the helmets commonly worn by dwarves. The thick metal plating protects them from falling debris and stalactites.",
   "price" : "100g",
-  "itemLocation" : "Underground Mine (1%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a> (1.2%)"
+  "itemLocation" : "Underground Mine (1%)\nOmni Geode (1.2%)"
 }, {
   "itemType" : "artifacts",
   "title" : "Dwarf Gadget",
   "image" : "Dwarf_Gadget",
   "description" : "It's a piece of the advanced technology once known to the dwarves. It's still glowing and humming, but you're unable to understand how it works.",
   "price" : "200g",
-  "itemLocation" : "Underground Mine (0.1%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a> (1.2%)"
+  "itemLocation" : "Underground Mine (0.1%)\nOmni Geode (1.2%)"
 }, {
   "itemType" : "artifacts",
   "title" : "Ancient Drum",
   "image" : "Ancient_Drum",
   "description" : "It's a drum made from wood and animal skin. It has a low, reverberating tone.",
   "price" : "100g",
-  "itemLocation" : "Underground Mine (2%)\nBus Stop (1%)\nForest (1%)\nTown (0.5%)\n<a href=\"/Omni_Geode\" title=\"Omni Geode\">Omni Geode</a> (1.2%)"
+  "itemLocation" : "Underground Mine (2%)\nBus Stop (1%)\nForest (1%)\nTown (0.5%)\nOmni Geode (1.2%)"
 }, {
   "itemType" : "artifacts",
   "title" : "Golden Mask",

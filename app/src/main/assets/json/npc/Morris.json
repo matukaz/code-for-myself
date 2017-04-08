@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Morris",
+  "image" : "morris",
+  "details" : {
+    "Birthday:" : "N/A",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "JojaMart",
+    "Marriage:" : "No"
+  }
+}]

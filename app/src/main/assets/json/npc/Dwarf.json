@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Dwarf",
+  "image" : "dwarf",
+  "details" : {
+    "Birthday:" : "Summer 22",
+    "Lives In:" : "Mines",
+    "Address:" : "Eastern Cave",
+    "Marriage:" : "No"
+  }
+}]

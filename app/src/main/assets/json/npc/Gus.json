@@ -1,0 +1,12 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Gus",
+  "image" : "gus",
+  "details" : {
+    "Birthday:" : "Summer 8",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "The Saloon",
+    "Friends:" : "Pam Emily",
+    "Marriage:" : "No"
+  }
+}]

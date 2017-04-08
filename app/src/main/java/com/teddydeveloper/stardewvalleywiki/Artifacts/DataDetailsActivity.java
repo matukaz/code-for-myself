@@ -42,18 +42,23 @@ public class DataDetailsActivity extends AppCompatActivity {
     @Bind(R.id.ingredientsText)
     TextView ingredientsText;
 
+    private Data data;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_artifact);
         ButterKnife.bind(this);
 
-        initalizeDetailView();
+        data = (Data) getIntent().getSerializableExtra("data");
+        if(!data.getItemType().toLowerCase().equals("npc")) {
+            initalizeDetailView();
+        }
     }
 
     private void initalizeDetailView() {
 
-        Data data = (Data) getIntent().getSerializableExtra("data");
+
 
         // Probably don't need this.
     //   int imageId = getResources().getIdentifier(data.getImage().toLowerCase(), "drawable", this.getPackageName());
@@ -61,7 +66,12 @@ public class DataDetailsActivity extends AppCompatActivity {
         title.setText(data.getTitle());
         description.setText(data.getDescription());
         image.setImageResource(data.getPhotoId());
-        location.setText("Location:\n" + data.getItemLocation());
+
+        if(data.getItemLocation() != null){
+            location.setVisibility(View.VISIBLE);
+            location.setText("Location:\n" + data.getItemLocation());
+        }
+
 
         if(data.getEffect()!= null){
             LinearLayout linearLayout = (LinearLayout) findViewById(R.id.effectLayout);
@@ -72,7 +82,7 @@ public class DataDetailsActivity extends AppCompatActivity {
         if(data.getPrice() != null || data.getBuyingPrice() != null || data.getSellingPrice() != null){
             priceLayout.setVisibility(View.VISIBLE);
             if(data.getBuyingPrice() != null || data.getSellingPrice() != null){
-                String buyingPrice = (data.getBuyingPrice() != null && !data.getBuyingPrice().isEmpty() ? "Buy: ?" + data.getBuyingPrice() :"");
+                String buyingPrice = (data.getBuyingPrice() != null && !data.getBuyingPrice().isEmpty() ? "Buy: " + data.getBuyingPrice() :"");
                 String sellingPrice = (data.getBuyingPrice() != null && !data.getBuyingPrice().isEmpty() ?  "Sell: " + data.getSellingPrice() : "");
                 String price = buyingPrice +" "+ sellingPrice;
                 priceText.setText(price);

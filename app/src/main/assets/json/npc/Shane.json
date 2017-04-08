@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Shane",
+  "image" : "shane",
+  "details" : {
+    "Birthday:" : "Spring 20",
+    "Lives In:" : "Cindersap Forest",
+    "Address:" : "Marnie's Ranch",
+    "Family:" : "Marnie (Aunt) Jas (Goddaughter)",
+    "Friends:" : "Emily",
+    "Marriage:" : "Yes[1]"
+  }
+}]

@@ -151,10 +151,7 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data("rings", "Rings", R.drawable.vampire_ring));
         data.add(new Data("map", "Map", R.drawable.main_map));
         data.add(new Data("links", "Useful links", R.drawable.url));
-
-
-
-     //   data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
+     // data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
     }
 
     @Override

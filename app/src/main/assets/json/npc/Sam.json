@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Sam",
+  "image" : "sam",
+  "details" : {
+    "Birthday:" : "Summer 17",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "1 Willow Lane",
+    "Family:" : "Kent (Father) Jodi (Mother) Vincent (Brother)",
+    "Friends:" : "Sebastian Abigail Penny",
+    "Marriage:" : "Yes"
+  }
+}]

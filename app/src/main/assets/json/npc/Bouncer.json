@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Bouncer",
+  "image" : "bouncer",
+  "details" : {
+    "Birthday:" : "N/A",
+    "Lives In:" : "The Desert",
+    "Address:" : "Oasis",
+    "Marriage:" : "No"
+  }
+}]

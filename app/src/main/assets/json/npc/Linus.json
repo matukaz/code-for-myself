@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Linus",
+  "image" : "linus",
+  "details" : {
+    "Birthday:" : "Winter 3",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "Tent",
+    "Marriage:" : "No"
+  }
+}]

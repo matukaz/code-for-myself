@@ -10,18 +10,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.pkmmte.pkrss.Article;
-import com.pkmmte.pkrss.Callback;
-import com.pkmmte.pkrss.PkRSS;
 
 import java.util.List;
 
-public class RssFeedActivity extends AppCompatActivity implements Callback {
-
+public class RssFeedActivity extends AppCompatActivity {
+    //  implements Callback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rss_feed);
+    /**    setContentView(R.layout.activity_rss_feed);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -43,10 +40,10 @@ public class RssFeedActivity extends AppCompatActivity implements Callback {
         //TextView t = (TextView) findViewById(R.id.title_rss_feed);
 
         String url = "http://steamcommunity.com/games/413150/rss/";
-        PkRSS.with(this).load(url).callback(this).async();
+        PkRSS.with(this).load(url).callback(this).async(); */
 
     }
-
+/**
     @Override
     public void onPreload() {
 
@@ -69,5 +66,5 @@ public class RssFeedActivity extends AppCompatActivity implements Callback {
     public void onLoadFailed() {
         Toast.makeText(this, "FAIL", Toast.LENGTH_LONG);
     }
-
+*/
 }

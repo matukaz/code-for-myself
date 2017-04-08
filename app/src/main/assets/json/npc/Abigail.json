@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Abigail",
+  "image" : "abigail",
+  "details" : {
+    "Birthday:" : "Fall 13",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "Pierre's General Store",
+    "Family:" : "Pierre (Father) Caroline (Mother)",
+    "Friends:" : "Sebastian Sam",
+    "Marriage:" : "Yes"
+  }
+}]

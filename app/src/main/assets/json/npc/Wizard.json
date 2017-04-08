@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Wizard",
+  "image" : "wizard",
+  "details" : {
+    "Birthday:" : "Winter 17",
+    "Lives In:" : "Cindersap Forest",
+    "Address:" : "Wizard's Tower",
+    "Marriage:" : "No"
+  }
+}]

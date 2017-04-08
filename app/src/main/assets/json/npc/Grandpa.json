@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Grandpa",
+  "image" : "grandpa",
+  "details" : {
+    "Birthday:" : "N/A",
+    "Lives In:" : "N/A",
+    "Address:" : "Afterlife",
+    "Marriage:" : "No"
+  }
+}]

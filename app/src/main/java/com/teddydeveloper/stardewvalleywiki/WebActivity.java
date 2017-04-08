@@ -7,15 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
 import com.adcash.mobileads.ui.AdcashBannerView;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.revmob.RevMob;
-import com.revmob.RevMobAdsListener;
 
 public class WebActivity extends AppCompatActivity {
 
@@ -78,6 +74,9 @@ public class WebActivity extends AppCompatActivity {
         }
 
         else if(itemType.toLowerCase().equals("npc")){
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.addJavascriptInterface(this, "webConnector");
+            webView.addJavascriptInterface(this, "toaster");
 
             webView.loadUrl("file:///android_asset/html/" + title.toLowerCase() + ".html");
         }

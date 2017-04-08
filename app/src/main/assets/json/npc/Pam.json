@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Pam",
+  "image" : "pam",
+  "details" : {
+    "Birthday:" : "Spring 18",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "Trailer",
+    "Family:" : "Penny (Daughter)",
+    "Friends:" : "Gus",
+    "Marriage:" : "No"
+  }
+}]

@@ -1,0 +1,12 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Willy",
+  "image" : "willy",
+  "details" : {
+    "Birthday:" : "Summer 24",
+    "Lives In:" : "The Beach",
+    "Address:" : "Fish Shop",
+    "Friends:" : "Elliott",
+    "Marriage:" : "No"
+  }
+}]

@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Jodi",
+  "image" : "jodi",
+  "details" : {
+    "Birthday:" : "Fall 11",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "1 Willow Lane",
+    "Family:" : "Kent (Husband) Sam (Son) Vincent (Son)",
+    "Friends:" : "Caroline",
+    "Marriage:" : "No"
+  }
+}]

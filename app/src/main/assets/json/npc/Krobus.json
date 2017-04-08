@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Krobus",
+  "image" : "krobus",
+  "details" : {
+    "Birthday:" : "Winter 1",
+    "Lives In:" : "The Sewers",
+    "Address:" : "Krobus's Shop",
+    "Marriage:" : "No"
+  }
+}]

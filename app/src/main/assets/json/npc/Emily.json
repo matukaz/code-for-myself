@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Emily",
+  "image" : "emily",
+  "details" : {
+    "Birthday:" : "Spring 27",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "2 Willow Lane",
+    "Family:" : "Haley (Sister)",
+    "Friends:" : "Sandy Gus Clint Shane",
+    "Marriage:" : "Yes[1]"
+  }
+}]

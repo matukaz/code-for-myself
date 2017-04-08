@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Sebastian",
+  "image" : "sebastian",
+  "details" : {
+    "Birthday:" : "Winter 10",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "24 Mountain Road",
+    "Family:" : "Robin (Mother) Maru (Half-Sister) Demetrius (Step-Father)",
+    "Friends:" : "Sam Abigail",
+    "Marriage:" : "Yes"
+  }
+}]

@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Penny",
+  "image" : "penny",
+  "details" : {
+    "Birthday:" : "Fall 2",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "Trailer",
+    "Family:" : "Pam (Mother)",
+    "Friends:" : "Sam Maru",
+    "Marriage:" : "Yes"
+  }
+}]

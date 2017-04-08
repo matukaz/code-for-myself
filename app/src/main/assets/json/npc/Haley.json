@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Haley",
+  "image" : "haley",
+  "details" : {
+    "Birthday:" : "Spring 14",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "2 Willow Lane",
+    "Family:" : "Emily (Sister)",
+    "Friends:" : "Alex",
+    "Marriage:" : "Yes"
+  }
+}]

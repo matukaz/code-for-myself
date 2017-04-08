@@ -1,0 +1,12 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Leah",
+  "image" : "leah",
+  "details" : {
+    "Birthday:" : "Winter 23",
+    "Lives In:" : "Cindersap Forest",
+    "Address:" : "Leah's Cottage",
+    "Friends:" : "Elliott",
+    "Marriage:" : "Yes"
+  }
+}]

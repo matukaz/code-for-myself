@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Caroline",
+  "image" : "caroline",
+  "details" : {
+    "Birthday:" : "Winter 7",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "Pierre's General Store",
+    "Family:" : "Pierre (Husband) Abigail (Daughter)",
+    "Friends:" : "Jodi Kent",
+    "Marriage:" : "No"
+  }
+}]

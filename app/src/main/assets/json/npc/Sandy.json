@@ -1,0 +1,12 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Sandy",
+  "image" : "sandy",
+  "details" : {
+    "Birthday:" : "Fall 15",
+    "Lives In:" : "The Desert",
+    "Address:" : "Oasis",
+    "Friends:" : "Emily",
+    "Marriage:" : "No"
+  }
+}]

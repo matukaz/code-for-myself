@@ -1,6 +1,7 @@
 package com.teddydeveloper.stardewvalleywiki;
 
 import java.io.Serializable;
+import java.util.LinkedHashMap;
 
 /**
  * Created by Matu on 2.03.2016.
@@ -19,6 +20,7 @@ public class Data implements Serializable {
     private String buyingPrice;
     private String itemLocation;
     private String ingredients;
+    private LinkedHashMap<String, String> details;
 
     //Dummy constructor to solve Jackson JsonMappingException Error.
     public Data() {
@@ -123,6 +125,14 @@ public class Data implements Serializable {
 
     public void setPhotoId(int photoId) {
         this.photoId = photoId;
+    }
+
+
+    public LinkedHashMap<String, String> getDetails() {
+        return details;
+    }
+    public void setDetails(LinkedHashMap<String, String> details) {
+        this.details = details;
     }
 
     @Override

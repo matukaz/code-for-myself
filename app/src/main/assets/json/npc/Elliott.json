@@ -1,0 +1,12 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Elliott",
+  "image" : "elliott",
+  "details" : {
+    "Birthday:" : "Fall 5",
+    "Lives In:" : "The Beach",
+    "Address:" : "Elliott's Cabin",
+    "Friends:" : "Willy Leah",
+    "Marriage:" : "Yes"
+  }
+}]

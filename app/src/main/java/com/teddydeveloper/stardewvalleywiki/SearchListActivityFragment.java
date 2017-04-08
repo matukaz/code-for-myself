@@ -114,48 +114,19 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
         data = new ArrayList<>();
 
         if(itemType.toLowerCase().equals("npc")) {
-            // WTF??? kui on , "" siis ei näita midagi??= WTFSFA  FUCK U
+            Log.d("NPC!!!" +itemType.toLowerCase(), LOG_TAG);
+            String[] npcList = {"Abigail","Alex","Elliott","Harvey","Sam","Sebastian","Shane","Abigail","Emily","Haley","Leah","Maru","Penny","Caroline","Clint","Demetrius","Dwarf","Evelyn","George","Gus","Jas","Jodi","Kent","Krobus","Lewis","Linus","Marnie","Pam","Pierre","Robin","Sandy","Vincent","Willy","Wizard","Bouncer","Gil","Governor","Grandpa","Gunther","Henchman","Marlon","Morris","Mr._Qi"};
 
-            data.add(new Data("NPC", "Abigail", R.drawable.abigail_icon));
-            data.add(new Data("NPC", "Alex", R.drawable.alex_icon));
-            data.add(new Data("NPC", "Caroline", R.drawable.caroline_icon));
-            data.add(new Data("NPC", "Clint", R.drawable.clint_icon));
-            data.add(new Data("NPC", "Demetrius", R.drawable.demetrius_icon));
-            data.add(new Data("NPC", "Dwarf", R.drawable.dwarf_icon));
-            data.add(new Data("NPC", "Elliott", R.drawable.elliott_icon));
-            data.add(new Data("NPC", "Emily", R.drawable.emily_icon));
-            data.add(new Data("NPC", "Evelyn", R.drawable.evelyn_icon));
-            data.add(new Data("NPC", "George", R.drawable.george_icon));
-            data.add(new Data("NPC", "Gus", R.drawable.gus_icon));
-            data.add(new Data("NPC", "Haley", R.drawable.haley_icon));
-            data.add(new Data("NPC", "Harvey", R.drawable.harvey_icon));
-            data.add(new Data("NPC", "Jas", R.drawable.jas_icon));
-            data.add(new Data("NPC", "Jodi", R.drawable.jodi_icon));
-            data.add(new Data("NPC", "Kent", R.drawable.kent_icon));
-            data.add(new Data("NPC", "Krobus", R.drawable.krobus_icon));
-            data.add(new Data("NPC", "Leah", R.drawable.leah_icon));
-            data.add(new Data("NPC", "Lewis", R.drawable.lewis_icon));
-            data.add(new Data("NPC", "Linus", R.drawable.linus_icon));
-            data.add(new Data("NPC", "Marnie", R.drawable.marnie_icon));
-            data.add(new Data("NPC", "Maru", R.drawable.maru_icon));
-            data.add(new Data("NPC", "Pam", R.drawable.pam_icon));
-            data.add(new Data("NPC", "Penny", R.drawable.penny_icon));
-            data.add(new Data("NPC", "Pierre", R.drawable.pierre_icon));
-            data.add(new Data("NPC", "Robin", R.drawable.robin_icon));
-            data.add(new Data("NPC", "Sam", R.drawable.sam_icon));
-            data.add(new Data("NPC", "Sandy", R.drawable.sandy_icon));
-            data.add(new Data("NPC", "Sebastian", R.drawable.sebastian_icon));
-            data.add(new Data("NPC", "Shane", R.drawable.shane_icon));
-            data.add(new Data("NPC", "Vincent", R.drawable.vincent_icon));
-            data.add(new Data("NPC", "Willy", R.drawable.willy_icon));
-            data.add(new Data("NPC", "Wizard", R.drawable.wizard_icon));
-        }
+            for(String npc: npcList) {
+                String json = Json.JSONFileToString(getContext(), "json/npc/"+ npc +".json");
+                jsonToDataObjectNpc(json);
+            }
 
+            for(Data item: data) {
+                item.setPhotoId(getContext().getResources().getIdentifier(item.getImage().toLowerCase(), "drawable", getContext().getPackageName()));
+            }
 
-
-
-
-        else if(itemType.toLowerCase().equals("food")) {
+        } else if(itemType.toLowerCase().equals("food")) {
             data.add(new Data("Food", "Algae Soup", R.drawable.algae_soup));
             data.add(new Data("Food", "Artichoke Dip", R.drawable.artichoke_dip));
             data.add(new Data("Food", "Blueberry Tart", R.drawable.blueberry_tart));
@@ -222,7 +193,6 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
             data.add(new Data("Food", "Stuffing", R.drawable.stuffing));
             data.add(new Data("Food", "Super Meal", R.drawable.super_meal));
             data.add(new Data("Food", "Survival Burger", R.drawable.survival_burger));
-            //     data.add(new Data("Food", "test",R.drawable.test));
             data.add(new Data("Food", "Tom Kha Soup", R.drawable.tom_kha_soup));
             data.add(new Data("Food", "Tortilla", R.drawable.tortilla));
             data.add(new Data("Food", "Trout Soup", R.drawable.trout_soup));
@@ -265,7 +235,6 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
             data.add(new Data("crop","Tulip", R.drawable.tulip));
             data.add(new Data("crop","Wheat", R.drawable.wheat));
             data.add(new Data("crop","Yam", R.drawable.yam));
-
             data.add(new Data("crop","Apricot", R.drawable.apricot));
             data.add(new Data("crop","Cherry", R.drawable.cherry));
             data.add(new Data("crop","Orange", R.drawable.orange));
@@ -367,6 +336,18 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
         }
     }
 
+    private void jsonToDataObjectNpc(String json) {
+        // JSON String to object
+        ObjectMapper mapper = new ObjectMapper();
+        // delete me and refactor me to function
+        try {
+           List<Data> tempData = mapper.readValue(json, new TypeReference<List<Data>>(){});
+            data.addAll(tempData);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+}
     @Override
     public void itemClicked(View view, int position) {
         Log.d("itemClicked" + view.toString(),LOG_TAG);
@@ -385,6 +366,11 @@ public class SearchListActivityFragment extends Fragment implements SearchDataAd
                 ringsIntent.putExtra("data", adapter2.getData().get(position));
                 startActivity(ringsIntent);
                 break;
+        /**    case "npc":
+                Intent npcintent = new Intent(getActivity(), DataDetailsActivity.class);
+                npcintent.putExtra("data", adapter2.getData().get(position));
+                startActivity(npcintent);
+                break; **/
             default:
                 Log.d(LOG_TAG, "ITEM WAS: " + adapter2.getData().get(position).toString().toLowerCase());
                 Intent webActivity = new Intent(getActivity(), WebActivity.class);

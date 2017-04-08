@@ -1,0 +1,12 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Demetrius",
+  "image" : "demetrius",
+  "details" : {
+    "Birthday:" : "Summer 19",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "24 Mountain Road",
+    "Family:" : "Robin (Wife) Maru (Daughter) Sebastian (Step-son)",
+    "Marriage:" : "No"
+  }
+}]

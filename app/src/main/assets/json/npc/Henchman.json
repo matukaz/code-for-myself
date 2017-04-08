@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Henchman",
+  "image" : "henchman",
+  "details" : {
+    "Birthday:" : "N/A",
+    "Lives In:" : "Witch's Swamp",
+    "Address:" : "N/A",
+    "Marriage:" : "No"
+  }
+}]

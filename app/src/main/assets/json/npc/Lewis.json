@@ -1,0 +1,12 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Lewis",
+  "image" : "lewis",
+  "details" : {
+    "Birthday:" : "Spring 7",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "Mayor's Manor",
+    "Friends:" : "Marnie",
+    "Marriage:" : "No"
+  }
+}]

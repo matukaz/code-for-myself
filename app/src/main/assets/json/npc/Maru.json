@@ -1,0 +1,13 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Maru",
+  "image" : "maru",
+  "details" : {
+    "Birthday:" : "Summer 10",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "24 Mountain Road",
+    "Family:" : "Demetrius (Father) Robin (Mother) Sebastian (Half-Brother)",
+    "Friends:" : "Penny",
+    "Marriage:" : "Yes"
+  }
+}]

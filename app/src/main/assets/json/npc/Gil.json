@@ -1,0 +1,11 @@
+[{
+  "itemType" : "Npc",
+  "title" : "Gil",
+  "image" : "gil",
+  "details" : {
+    "Birthday:" : "N/A",
+    "Lives In:" : "Pelican Town",
+    "Address:" : "Adventurer's Guild",
+    "Marriage:" : "No"
+  }
+}]
