@@ -12,8 +12,8 @@ android {
         applicationId "com.teddydeveloper.stardewvalleywiki"
         minSdkVersion 21
         targetSdkVersion 25
-        versionCode 17
-        versionName "2.3.4"
+        versionCode 19
+        versionName "2.3.5"
         // Enabling multidex support.
         multiDexEnabled true
         applicationId "com.teddydeveloper.stardewvalleywiki"
@@ -67,6 +67,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.amplitude:android-sdk:2.5.0'
     compile 'com.google.android.gms:play-services-ads:10.2.1'
+    compile 'com.google.android.gms:play-services-location:10.2.1'
     //compile 'com.google.firebase:firebase-messaging:9.4.0'
 
     // Integrate Adcash SDK:
@@ -83,6 +84,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.4'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.4'
 
+    compile project(':cheetah-mobile-3.4.7')
 }
 
 

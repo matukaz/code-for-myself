@@ -7,11 +7,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageView;
 
 import com.adcash.mobileads.ui.AdcashBannerView;
+import com.amplitude.api.Amplitude;
+import com.appodeal.ads.Appodeal;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.revmob.RevMob;
+import com.teddydeveloper.stardewvalleywiki.Helper.Helper;
+
+import java.util.Random;
 
 public class WebActivity extends AppCompatActivity {
 
@@ -41,9 +51,14 @@ public class WebActivity extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.webView);
         webView.setBackgroundColor(Color.TRANSPARENT);
-        webView.setWebChromeClient(new WebChromeClient() {
+        WebViewClient client  = new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return false;
+            }
+        };
 
-        });
+        webView.setWebViewClient(client);
 
         setTitle(toTitleCase(itemType));
         if(itemType.toLowerCase().equals("spring")) {
@@ -89,23 +104,31 @@ public class WebActivity extends AppCompatActivity {
             setTitle("Resources & Minerals");
             String newTitle = toTitleCase(title).replaceAll(" ", "_");
             webView.loadUrl("file:///android_asset/mineral/" + newTitle + ".html");
-
         }
-
-
         else if(itemType.toLowerCase().equals("food")){
-
-
             showAds();
             String newTitle = toTitleCase(title).replaceAll(" ", "_");
-
             webView.loadUrl("file:///android_asset/food/" + newTitle + ".html");
         }
 
     }
     public void showAds(){
 
-        /**
+        ImageView reserverSpot = (ImageView) findViewById(R.id.reserver);
+        reserverSpot.setVisibility(View.VISIBLE);
+
+
+        Random rand = new Random();
+        int value = rand.nextInt(10);
+        if (value == 5 || value == 6 || value == 7) {
+            showGoForItBotAd();
+        } else {
+            showAppodealAds();
+            // showAdMobAds();
+        }
+    }
+
+    private void showAdMobAds() {
         final AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
 
@@ -118,7 +141,33 @@ public class WebActivity extends AppCompatActivity {
                 mAdView.setVisibility(View.VISIBLE);
             }
         });
- */
+    }
+
+    private void showAppodealAds() {
+        String appKey = "4ac68d25a80d5a2dfb41e77ea789b604b82d572964e86344";
+        Appodeal.disableLocationPermissionCheck();
+        Appodeal.cache(this, Appodeal.BANNER_BOTTOM, 3);
+        Appodeal.initialize(this, appKey, Appodeal.BANNER_BOTTOM);
+        Appodeal.show(this, Appodeal.BANNER_BOTTOM);
+    }
+
+    private void showGoForItBotAd() {
+        Amplitude.getInstance().logEvent("BANNER_GOFORIT_SHOWN");
+        ImageView goForItBotBanner = (ImageView) findViewById(R.id.goforitbanner);
+        goForItBotBanner.setVisibility(View.VISIBLE);
+        goForItBotBanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Amplitude.getInstance().logEvent("BANNER_GOFORIT_CLICKED");
+                Helper.openWebPage(v.getContext(), "https://www.facebook.com/GoforitBot/");
+             }
+         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Appodeal.onResume(this, Appodeal.BANNER_BOTTOM);
     }
 
     @Override
@@ -157,12 +206,8 @@ public class WebActivity extends AppCompatActivity {
        if( webView.canGoBack()){
            webView.goBack();
        } else{
-
            finish();
        }
-
-
-
     }
 }
 

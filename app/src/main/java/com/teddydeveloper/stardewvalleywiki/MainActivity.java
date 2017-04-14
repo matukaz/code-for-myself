@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity
         data.add(new Data("rings", "Rings", R.drawable.vampire_ring));
         data.add(new Data("map", "Map", R.drawable.main_map));
         data.add(new Data("links", "Useful links", R.drawable.url));
-     // data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
+        // data.add(new Data("giveaway", "Giveaway", android.R.drawable.ic_menu_compass));
     }
 
     @Override
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_feedback) {
             Amplitude.getInstance().logEvent("SEND_FEEDBACK");
             sendFeedback();
-        } else if(id == R.id.nav_form) {
+        } else if (id == R.id.nav_form) {
             //todo open google form
             saveGoogleFormPref();
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://goo.gl/forms/t6RGzRBIAM"));
@@ -211,7 +211,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void showGooglePlayStore() {
-
         try {
             //Open google play market
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + this.getPackageName())));

@@ -18,6 +18,13 @@
         android:layout_weight="1"
         android:id="@+id/webView" />
 
+        <ImageView
+            android:id="@+id/reserver"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:visibility="gone"/>
+
         <com.adcash.mobileads.ui.AdcashBannerView
             android:id="@+id/banner"
             android:layout_width="match_parent"

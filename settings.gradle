@@ -1,1 +1,1 @@
-include ':app', ':revmobadapter'
+include ':app', ':revmobadapter', ':cheetah-mobile-3.4.7'
